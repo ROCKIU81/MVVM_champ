@@ -1,0 +1,767 @@
+<Window x:Class="MVVM_Champ.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="World Cup MVVM"
+        Height="750"
+        Width="1400"
+        MinHeight="700"
+        MinWidth="1200"
+        WindowStartupLocation="CenterScreen"
+        Background="#0F172A">
+    <Window.Resources>
+        <SolidColorBrush x:Key="AppBackgroundBrush" Color="#F8FAFC"/>
+        <SolidColorBrush x:Key="PanelBrush" Color="#FFFFFF"/>
+        <SolidColorBrush x:Key="AccentBrush" Color="#2563EB"/>
+        <SolidColorBrush x:Key="AccentHoverBrush" Color="#1D4ED8"/>
+        <SolidColorBrush x:Key="DangerBrush" Color="#DC2626"/>
+        <SolidColorBrush x:Key="SuccessBrush" Color="#16A34A"/>
+        <SolidColorBrush x:Key="SuccessHoverBrush" Color="#15803D"/>
+        <SolidColorBrush x:Key="BorderBrushSoft" Color="#E2E8F0"/>
+        <SolidColorBrush x:Key="HeaderBrush" Color="#E0E7FF"/>
+
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="{StaticResource AccentBrush}"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Padding" Value="16,9"/>
+            <Setter Property="Margin" Value="0,0,10,0"/>
+            <Setter Property="FontSize" Value="13"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" CornerRadius="10">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="{StaticResource AccentHoverBrush}"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter Property="Opacity" Value="0.5"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="DangerButtonStyle" TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
+            <Setter Property="Background" Value="{StaticResource DangerBrush}"/>
+        </Style>
+
+        <Style x:Key="SuccessButtonStyle" TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
+            <Setter Property="Background" Value="{StaticResource SuccessBrush}"/>
+        </Style>
+
+        <Style TargetType="DataGrid">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="BorderBrush" Value="{StaticResource BorderBrushSoft}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="RowBackground" Value="White"/>
+            <Setter Property="AlternatingRowBackground" Value="#F8FAFC"/>
+            <Setter Property="GridLinesVisibility" Value="Horizontal"/>
+            <Setter Property="HorizontalGridLinesBrush" Value="#E2E8F0"/>
+            <Setter Property="VerticalGridLinesBrush" Value="#E2E8F0"/>
+            <Setter Property="HeadersVisibility" Value="Column"/>
+            <Setter Property="CanUserAddRows" Value="False"/>
+            <Setter Property="CanUserDeleteRows" Value="False"/>
+            <Setter Property="RowHeaderWidth" Value="0"/>
+            <Setter Property="IsReadOnly" Value="True"/>
+            <Setter Property="SelectionMode" Value="Single"/>
+            <Setter Property="SelectionUnit" Value="FullRow"/>
+            <Setter Property="FontSize" Value="13"/>
+            <Setter Property="AutoGenerateColumns" Value="False"/>
+        </Style>
+
+        <Style TargetType="DataGridColumnHeader">
+            <Setter Property="Background" Value="{StaticResource HeaderBrush}"/>
+            <Setter Property="Foreground" Value="#1E1B4B"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Padding" Value="10,8"/>
+        </Style>
+
+        <Style TargetType="DataGridRow">
+            <Setter Property="MinHeight" Value="38"/>
+            <Style.Triggers>
+                <Trigger Property="IsSelected" Value="True">
+                    <Setter Property="Background" Value="#DBEAFE"/>
+                    <Setter Property="Foreground" Value="#0F172A"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style TargetType="TabItem">
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Margin" Value="0,0,2,0"/>
+            <Setter Property="Padding" Value="20,10"/>
+            <Setter Property="FontSize" Value="13"/>
+            <Setter Property="MinWidth" Value="100"/>
+        </Style>
+
+        <Style x:Key="SectionSeparatorStyle" TargetType="Separator">
+            <Setter Property="Margin" Value="0,16,0,16"/>
+            <Setter Property="Background" Value="#CBD5E1"/>
+            <Setter Property="Height" Value="1"/>
+        </Style>
+
+        <Style TargetType="TextBox">
+            <Setter Property="Padding" Value="10,8"/>
+            <Setter Property="Margin" Value="0,0,0,10"/>
+            <Setter Property="BorderBrush" Value="#CBD5E1"/>
+            <Setter Property="BorderThickness" Value="1"/>
+        </Style>
+
+        <Style TargetType="ComboBox">
+            <Setter Property="Padding" Value="8,6"/>
+            <Setter Property="Margin" Value="0,0,0,10"/>
+            <Setter Property="BorderBrush" Value="#CBD5E1"/>
+            <Setter Property="BorderThickness" Value="1"/>
+        </Style>
+
+        <Style TargetType="DatePicker">
+            <Setter Property="Margin" Value="0,0,0,10"/>
+        </Style>
+
+        <Style x:Key="FormLabelStyle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Foreground" Value="#334155"/>
+            <Setter Property="Margin" Value="0,0,0,6"/>
+        </Style>
+
+        <Style x:Key="CardStyle" TargetType="Border">
+            <Setter Property="Background" Value="#F8FAFC"/>
+            <Setter Property="BorderBrush" Value="#E2E8F0"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="CornerRadius" Value="14"/>
+            <Setter Property="Padding" Value="16"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid Background="{StaticResource AppBackgroundBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0"
+                Margin="20,12,20,12"
+                Padding="16"
+                Background="#111827"
+                CornerRadius="12">
+            <TextBlock Text="World Cup MVVM"
+                       FontSize="24"
+                       FontWeight="Bold"
+                       Foreground="White"
+                       VerticalAlignment="Center"/>
+        </Border>
+
+        <Border Grid.Row="1"
+                Margin="20,0,20,20"
+                Padding="18"
+                Background="{StaticResource PanelBrush}"
+                BorderBrush="{StaticResource BorderBrushSoft}"
+                BorderThickness="1"
+                CornerRadius="18">
+            <TabControl>
+                <TabItem Header="Страны">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <DockPanel Margin="0,0,0,12" HorizontalAlignment="Center">
+                            <StackPanel Orientation="Horizontal">
+                                <Button Width="130" Command="{Binding CountryViewModel.LoadCommand}" Content="Загрузить" Background="#FF16A34A" Height="41.96"/>
+                                <Button Width="130" Style="{StaticResource DangerButtonStyle}" Command="{Binding CountryViewModel.DeleteCommand}" Content="Удалить"/>
+                            </StackPanel>
+                        </DockPanel>
+                        <Grid Grid.Row="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="380"/>
+                                <ColumnDefinition Width="12"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Border Grid.Column="0" Style="{StaticResource CardStyle}">
+                                <StackPanel>
+                                    <TextBlock Text="Поиск и фильтрация" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
+                                    <TextBlock Text="Поиск по названию" Style="{StaticResource FormLabelStyle}"/>
+                                    <TextBox Text="{Binding CountryViewModel.SearchText, UpdateSourceTrigger=PropertyChanged}" 
+                                             Margin="0,0,0,0"/>
+
+                                    <Separator Style="{StaticResource SectionSeparatorStyle}"/>
+
+                                    <TextBlock Text="Добавить / Редактировать" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
+                                    <TextBlock Text="Название страны" Style="{StaticResource FormLabelStyle}"/>
+                                    <TextBox Text="{Binding CountryViewModel.CountryName, UpdateSourceTrigger=PropertyChanged}"/>
+
+                                    <StackPanel Orientation="Horizontal" Margin="0,8,0,0">
+                                        <Button Width="110" Command="{Binding CountryViewModel.SaveCommand}" Content="Сохранить"/>
+                                        <Button Width="110" Command="{Binding CountryViewModel.ClearCommand}" Content="Очистить"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </Border>
+
+                            <DataGrid Grid.Column="2"
+                                      ItemsSource="{Binding CountryViewModel.Countries}"
+                                      SelectedItem="{Binding CountryViewModel.SelectedCountry}"
+                                      AutoGenerateColumns="False">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="Название" Binding="{Binding Name}" Width="*"/>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </Grid>
+                    </Grid>
+                </TabItem>
+
+                <TabItem Header="Чемпионаты">
+                    <TabItem.Background>
+                        <LinearGradientBrush EndPoint="0,1">
+                            <GradientStop Color="#FFF0F0F0"/>
+                            <GradientStop Color="#FFE5E5E5" Offset="1"/>
+                        </LinearGradientBrush>
+                    </TabItem.Background>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <DockPanel Margin="0,0,0,12" HorizontalAlignment="Center">
+                            <StackPanel Orientation="Horizontal">
+                                <Button Width="130" Command="{Binding ChampionshipViewModel.LoadCommand}" Content="Загрузить" Background="#FF16A34A" Height="41.96"/>
+                                <Button Width="130" Style="{StaticResource DangerButtonStyle}" Command="{Binding ChampionshipViewModel.DeleteCommand}" Content="Удалить"/>
+                            </StackPanel>
+                        </DockPanel>
+                        <Grid Grid.Row="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="380"/>
+                                <ColumnDefinition Width="12"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Border Grid.Column="0" Style="{StaticResource CardStyle}">
+                                <StackPanel>
+                                    <TextBlock Text="Поиск и фильтрация" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
+                                    <TextBlock Text="Поиск по году, городу, стране" Style="{StaticResource FormLabelStyle}"/>
+                                    <TextBox Text="{Binding ChampionshipViewModel.SearchText, UpdateSourceTrigger=PropertyChanged}" 
+                                             Margin="0,0,0,0"/>
+
+                                    <Separator Style="{StaticResource SectionSeparatorStyle}"/>
+
+                                    <TextBlock Text="Добавить / Редактировать" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
+                                    <TextBlock Text="Год" Style="{StaticResource FormLabelStyle}"/>
+                                    <TextBox Text="{Binding ChampionshipViewModel.Year, UpdateSourceTrigger=PropertyChanged}"/>
+
+                                    <TextBlock Text="Город" Style="{StaticResource FormLabelStyle}"/>
+                                    <TextBox Text="{Binding ChampionshipViewModel.City, UpdateSourceTrigger=PropertyChanged}"/>
+
+                                    <TextBlock Text="Страна проведения" Style="{StaticResource FormLabelStyle}"/>
+                                    <ComboBox ItemsSource="{Binding ChampionshipViewModel.Countries}"
+                                              SelectedItem="{Binding ChampionshipViewModel.SelectedCountry}"
+                                              DisplayMemberPath="Name"/>
+
+                                    <StackPanel Orientation="Horizontal" Margin="0,8,0,0">
+                                        <Button Width="110" Command="{Binding ChampionshipViewModel.SaveCommand}" Content="Сохранить"/>
+                                        <Button Width="110" Command="{Binding ChampionshipViewModel.ClearCommand}" Content="Очистить"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </Border>
+
+                            <DataGrid Grid.Column="2"
+                                      ItemsSource="{Binding ChampionshipViewModel.Championships}"
+                                      SelectedItem="{Binding ChampionshipViewModel.SelectedChampionship}"
+                                      AutoGenerateColumns="False">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="Чемпионат" Binding="{Binding ChampionshipDisplay}" Width="260"/>
+                                    <DataGridTextColumn Header="Страна проведения" Binding="{Binding Country.Name}" Width="220"/>
+                                    <DataGridTextColumn Header="Год" Binding="{Binding Year}" Width="120"/>
+                                    <DataGridTextColumn Header="Город" Binding="{Binding City}" Width="*"/>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </Grid>
+                    </Grid>
+                </TabItem>
+
+                <TabItem Header="Матчи">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <DockPanel Margin="0,0,0,12" HorizontalAlignment="Center">
+                            <StackPanel Orientation="Horizontal">
+                                <Button Width="130" Style="{StaticResource SuccessButtonStyle}" Command="{Binding MatchViewModel.LoadCommand}" Content="Загрузить" Height="41.96"/>
+                                <Button Width="130" Style="{StaticResource DangerButtonStyle}" Command="{Binding MatchViewModel.DeleteCommand}" Content="Удалить"/>
+                            </StackPanel>
+                        </DockPanel>
+                        <Grid Grid.Row="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="360"/>
+                                <ColumnDefinition Width="16"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Border Grid.Column="0" Style="{StaticResource CardStyle}">
+                                <ScrollViewer VerticalScrollBarVisibility="Auto" MaxHeight="500">
+                                    <StackPanel>
+                                    <TextBlock Text="Поиск и фильтрация" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
+                                    <TextBlock Text="Поиск по командам и счету" Style="{StaticResource FormLabelStyle}"/>
+                                    <TextBox Text="{Binding MatchViewModel.SearchText, UpdateSourceTrigger=PropertyChanged}" 
+                                             Margin="0,0,0,0"/>
+
+                                    <Separator Style="{StaticResource SectionSeparatorStyle}"/>
+
+                                    <TextBlock Text="Добавить / Редактировать" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
+                                    <TextBlock Text="Чемпионат" Style="{StaticResource FormLabelStyle}"/>
+                                    <ComboBox ItemsSource="{Binding MatchViewModel.Championships}"
+                                              SelectedItem="{Binding MatchViewModel.SelectedChampionship}"
+                                              DisplayMemberPath="ChampionshipDisplay"/>
+
+                                    <TextBlock Text="Команда 1" Style="{StaticResource FormLabelStyle}"/>
+                                    <ComboBox ItemsSource="{Binding MatchViewModel.Countries}"
+                                              SelectedItem="{Binding MatchViewModel.SelectedTeam1}"
+                                              DisplayMemberPath="Name"/>
+
+                                    <TextBlock Text="Команда 2" Style="{StaticResource FormLabelStyle}"/>
+                                    <ComboBox ItemsSource="{Binding MatchViewModel.Countries}"
+                                              SelectedItem="{Binding MatchViewModel.SelectedTeam2}"
+                                              DisplayMemberPath="Name"/>
+
+                                    <TextBlock Text="Счет команды 1" Style="{StaticResource FormLabelStyle}"/>
+                                    <TextBox Text="{Binding MatchViewModel.Team1Score, UpdateSourceTrigger=PropertyChanged}"/>
+
+                                    <TextBlock Text="Счет команды 2" Style="{StaticResource FormLabelStyle}"/>
+                                    <TextBox Text="{Binding MatchViewModel.Team2Score, UpdateSourceTrigger=PropertyChanged}"/>
+
+                                    <StackPanel Orientation="Horizontal" Margin="0,8,0,0">
+                                        <Button Width="110" Command="{Binding MatchViewModel.SaveCommand}" Content="Сохранить"/>
+                                        <Button Width="110" Command="{Binding MatchViewModel.ClearCommand}" Content="Очистить"/>
+                                    </StackPanel>
+                                </StackPanel>
+                                </ScrollViewer>
+                            </Border>
+
+                            <DataGrid Grid.Column="2"
+                                      ItemsSource="{Binding MatchViewModel.Matches}"
+                                      SelectedItem="{Binding MatchViewModel.SelectedMatch}"
+                                      AutoGenerateColumns="False">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="Матч" Binding="{Binding MatchDisplay}" Width="*"/>
+                                    <DataGridTextColumn Header="Чемпионат" Binding="{Binding Championship.ChampionshipDisplay}" Width="220"/>
+                                    <DataGridTextColumn Header="Счет" Binding="{Binding ScoreDisplay}" Width="120"/>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </Grid>
+                    </Grid>
+                </TabItem>
+
+                <TabItem Header="Люди">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <DockPanel Margin="0,0,0,12" HorizontalAlignment="Center">
+                            <StackPanel Orientation="Horizontal">
+                                <Button Width="130" Command="{Binding PersonViewModel.LoadCommand}" Content="Загрузить" Background="#FF16A34A" Height="41.96"/>
+                                <Button Width="130" Style="{StaticResource DangerButtonStyle}" Command="{Binding PersonViewModel.DeleteCommand}" Content="Удалить"/>
+                            </StackPanel>
+                        </DockPanel>
+                        <Grid Grid.Row="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="360"/>
+                                <ColumnDefinition Width="16"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Border Grid.Column="0" Style="{StaticResource CardStyle}">
+                                <StackPanel>
+                                    <TextBlock Text="Поиск и фильтрация" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
+                                    <TextBlock Text="Поиск по ФИО и статусу" Style="{StaticResource FormLabelStyle}"/>
+                                    <TextBox Text="{Binding PersonViewModel.SearchText, UpdateSourceTrigger=PropertyChanged}" 
+                                             Margin="0,0,0,0"/>
+
+                                    <Separator Style="{StaticResource SectionSeparatorStyle}"/>
+
+                                    <TextBlock Text="Добавить / Редактировать" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
+                                    <TextBlock Text="ФИО" Style="{StaticResource FormLabelStyle}"/>
+                                    <TextBox Text="{Binding PersonViewModel.FullName, UpdateSourceTrigger=PropertyChanged}"/>
+
+                                    <TextBlock Text="Дата рождения" Style="{StaticResource FormLabelStyle}"/>
+                                    <DatePicker SelectedDate="{Binding PersonViewModel.BirthDate}"/>
+
+                                    <TextBlock Text="Статус" Style="{StaticResource FormLabelStyle}"/>
+                                    <ComboBox ItemsSource="{Binding PersonViewModel.Statuses}"
+                                              SelectedItem="{Binding PersonViewModel.SelectedStatus}"/>
+
+                                    <StackPanel Orientation="Horizontal" Margin="0,8,0,0">
+                                        <Button Width="110" Command="{Binding PersonViewModel.SaveCommand}" Content="Сохранить"/>
+                                        <Button Width="110" Command="{Binding PersonViewModel.ClearCommand}" Content="Очистить"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </Border>
+
+                            <DataGrid Grid.Column="2"
+                                      ItemsSource="{Binding PersonViewModel.People}"
+                                      SelectedItem="{Binding PersonViewModel.SelectedPerson}"
+                                      AutoGenerateColumns="False">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="ФИО" Binding="{Binding FullName}" Width="*"/>
+                                    <DataGridTextColumn Header="Дата рождения" Binding="{Binding DateOfBirth, StringFormat=dd.MM.yyyy}" Width="170"/>
+                                    <DataGridTextColumn Header="Статус" Binding="{Binding Status}" Width="140"/>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </Grid>
+                    </Grid>
+                </TabItem>
+
+                <TabItem Header="Голы">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <DockPanel Margin="0,0,0,12" HorizontalAlignment="Center">
+                            <StackPanel Orientation="Horizontal">
+                                <Button Width="130" Command="{Binding GoalViewModel.LoadCommand}" Content="Загрузить" Background="#FF16A34A"/>
+                                <Button Width="130" Style="{StaticResource DangerButtonStyle}" Command="{Binding GoalViewModel.DeleteCommand}" Content="Удалить" Height="41.96"/>
+                            </StackPanel>
+                        </DockPanel>
+                        <Grid Grid.Row="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="360"/>
+                                <ColumnDefinition Width="16"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Border Grid.Column="0" Style="{StaticResource CardStyle}">
+                                <StackPanel>
+                                    <TextBlock Text="Поиск и фильтрация" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
+                                    <TextBlock Text="Поиск по игроку и типу гола" Style="{StaticResource FormLabelStyle}"/>
+                                    <TextBox Text="{Binding GoalViewModel.SearchText, UpdateSourceTrigger=PropertyChanged}" 
+                                             Margin="0,0,0,0"/>
+
+                                    <Separator Style="{StaticResource SectionSeparatorStyle}"/>
+
+                                    <TextBlock Text="Добавить / Редактировать" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
+                                    <TextBlock Text="Матч" Style="{StaticResource FormLabelStyle}"/>
+                                    <ComboBox ItemsSource="{Binding GoalViewModel.Matches}"
+                                              SelectedItem="{Binding GoalViewModel.SelectedMatch}"
+                                              DisplayMemberPath="MatchDisplay"/>
+
+                                    <TextBlock Text="Игрок" Style="{StaticResource FormLabelStyle}"/>
+                                    <ComboBox ItemsSource="{Binding GoalViewModel.Players}"
+                                              SelectedItem="{Binding GoalViewModel.SelectedPlayer}"
+                                              DisplayMemberPath="FullName"/>
+
+                                    <TextBlock Text="Тип гола" Style="{StaticResource FormLabelStyle}"/>
+                                    <ComboBox ItemsSource="{Binding GoalViewModel.GoalTypes}"
+                                              SelectedItem="{Binding GoalViewModel.SelectedGoalType}"
+                                              DisplayMemberPath="Name"/>
+
+                                    <TextBlock Text="Минута" Style="{StaticResource FormLabelStyle}"/>
+                                    <TextBox Text="{Binding GoalViewModel.Minute, UpdateSourceTrigger=PropertyChanged}"/>
+
+                                    <StackPanel Orientation="Horizontal" Margin="0,8,0,0">
+                                        <Button Width="110" Command="{Binding GoalViewModel.SaveCommand}" Content="Сохранить"/>
+                                        <Button Width="110" Command="{Binding GoalViewModel.ClearCommand}" Content="Очистить"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </Border>
+
+                            <DataGrid Grid.Column="2"
+                                      ItemsSource="{Binding GoalViewModel.Goals}"
+                                      SelectedItem="{Binding GoalViewModel.SelectedGoal}"
+                                      AutoGenerateColumns="False">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="Матч" Binding="{Binding MatchName}" Width="260"/>
+                                    <DataGridTextColumn Header="Событие" Binding="{Binding GoalDisplay}" Width="*"/>
+                                    <DataGridTextColumn Header="Игрок" Binding="{Binding PlayerName}" Width="220"/>
+                                    <DataGridTextColumn Header="Минута" Binding="{Binding MinuteDisplay}" Width="100"/>
+                                    <DataGridTextColumn Header="Тип гола" Binding="{Binding GoalTypeName}" Width="180"/>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </Grid>
+                    </Grid>
+                </TabItem>
+
+                <TabItem Header="Типы голов">
+                    <TabItem.Background>
+                        <LinearGradientBrush EndPoint="0,1">
+                            <GradientStop Color="#FFF0F0F0"/>
+                            <GradientStop Color="#FFE5E5E5" Offset="1"/>
+                        </LinearGradientBrush>
+                    </TabItem.Background>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <DockPanel Margin="0,0,0,12" HorizontalAlignment="Center">
+                            <StackPanel Orientation="Horizontal">
+                                <Button Width="130" Command="{Binding GoalTypeViewModel.LoadCommand}" Content="Загрузить" Background="#FF16A34A"/>
+                                <Button Width="130" Style="{StaticResource DangerButtonStyle}" Command="{Binding GoalTypeViewModel.DeleteCommand}" Content="Удалить" Height="41.96"/>
+                            </StackPanel>
+                        </DockPanel>
+                        <Grid Grid.Row="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="360"/>
+                                <ColumnDefinition Width="16"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Border Grid.Column="0" Style="{StaticResource CardStyle}">
+                                <StackPanel>
+                                    <TextBlock Text="Поиск и фильтрация" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
+                                    <TextBlock Text="Поиск по названию и описанию" Style="{StaticResource FormLabelStyle}"/>
+                                    <TextBox Text="{Binding GoalTypeViewModel.SearchText, UpdateSourceTrigger=PropertyChanged}" 
+                                             Margin="0,0,0,0"/>
+
+                                    <Separator Style="{StaticResource SectionSeparatorStyle}"/>
+
+                                    <TextBlock Text="Добавить / Редактировать" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
+                                    <TextBlock Text="Название" Style="{StaticResource FormLabelStyle}"/>
+                                    <TextBox Text="{Binding GoalTypeViewModel.GoalTypeName, UpdateSourceTrigger=PropertyChanged}"/>
+
+                                    <TextBlock Text="Описание" Style="{StaticResource FormLabelStyle}"/>
+                                    <TextBox Text="{Binding GoalTypeViewModel.Description, UpdateSourceTrigger=PropertyChanged}"
+                                             Height="90"
+                                             AcceptsReturn="True"
+                                             TextWrapping="Wrap"/>
+
+                                    <StackPanel Orientation="Horizontal" Margin="0,8,0,0">
+                                        <Button Width="110" Command="{Binding GoalTypeViewModel.SaveCommand}" Content="Сохранить"/>
+                                        <Button Width="110" Command="{Binding GoalTypeViewModel.ClearCommand}" Content="Очистить"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </Border>
+
+                            <DataGrid Grid.Column="2"
+                                      ItemsSource="{Binding GoalTypeViewModel.GoalTypes}"
+                                      SelectedItem="{Binding GoalTypeViewModel.SelectedGoalType}"
+                                      AutoGenerateColumns="False">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="Название" Binding="{Binding Name}" Width="220"/>
+                                    <DataGridTextColumn Header="Описание" Binding="{Binding Description}" Width="*"/>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </Grid>
+                    </Grid>
+                </TabItem>
+
+                <TabItem Header="Состав игроков">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <DockPanel Margin="0,0,0,12" HorizontalAlignment="Center">
+                            <StackPanel Orientation="Horizontal">
+                                <Button Width="130" Command="{Binding PlayerSquadViewModel.LoadCommand}" Content="Загрузить" Background="#FF16A34A" Height="41.96"/>
+                                <Button Width="130" Style="{StaticResource DangerButtonStyle}" Command="{Binding PlayerSquadViewModel.DeleteCommand}" Content="Удалить"/>
+                            </StackPanel>
+                        </DockPanel>
+                        <Grid Grid.Row="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="360"/>
+                                <ColumnDefinition Width="16"/>
+                                <ColumnDefinition Width="269*"/>
+                                <ColumnDefinition Width="671*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Border Grid.Column="0" Style="{StaticResource CardStyle}">
+                                <StackPanel>
+                                    <TextBlock Text="Поиск и фильтрация" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
+                                    <TextBlock Text="Поиск по игроку и команде" Style="{StaticResource FormLabelStyle}"/>
+                                    <TextBox Text="{Binding PlayerSquadViewModel.SearchText, UpdateSourceTrigger=PropertyChanged}" 
+                                             Margin="0,0,0,0"/>
+
+                                    <Separator Style="{StaticResource SectionSeparatorStyle}"/>
+
+                                    <TextBlock Text="Добавить / Редактировать" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
+                                    <TextBlock Text="Матч" Style="{StaticResource FormLabelStyle}"/>
+                                    <ComboBox ItemsSource="{Binding PlayerSquadViewModel.Matches}"
+                                              SelectedItem="{Binding PlayerSquadViewModel.SelectedMatch}"
+                                              DisplayMemberPath="MatchDisplay"/>
+
+                                    <TextBlock Text="Игрок" Style="{StaticResource FormLabelStyle}"/>
+                                    <ComboBox ItemsSource="{Binding PlayerSquadViewModel.Players}"
+                                              SelectedItem="{Binding PlayerSquadViewModel.SelectedPlayer}"
+                                              DisplayMemberPath="FullName"/>
+
+                                    <TextBlock Text="Команда" Style="{StaticResource FormLabelStyle}"/>
+                                    <ComboBox ItemsSource="{Binding PlayerSquadViewModel.Countries}"
+                                              SelectedItem="{Binding PlayerSquadViewModel.SelectedTeam}"
+                                              DisplayMemberPath="Name"/>
+
+                                    <TextBlock Text="Номер игрока" Style="{StaticResource FormLabelStyle}"/>
+                                    <TextBox Text="{Binding PlayerSquadViewModel.PlayerNumber, UpdateSourceTrigger=PropertyChanged}"/>
+
+                                    <StackPanel Orientation="Horizontal" Margin="0,8,0,0">
+                                        <Button Width="110" Command="{Binding PlayerSquadViewModel.SaveCommand}" Content="Сохранить"/>
+                                        <Button Width="110" Command="{Binding PlayerSquadViewModel.ClearCommand}" Content="Очистить"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </Border>
+
+                            <DataGrid Grid.Column="2"
+                                      ItemsSource="{Binding PlayerSquadViewModel.PlayerSquads}"
+                                      SelectedItem="{Binding PlayerSquadViewModel.SelectedPlayerSquad}"
+                                      AutoGenerateColumns="False" Grid.ColumnSpan="2">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="Матч" Binding="{Binding MatchName}" Width="260"/>
+                                    <DataGridTextColumn Header="Игрок в заявке" Binding="{Binding SquadDisplay}" Width="*"/>
+                                    <DataGridTextColumn Header="Игрок" Binding="{Binding PlayerName}" Width="220"/>
+                                    <DataGridTextColumn Header="Команда" Binding="{Binding TeamName}" Width="180"/>
+                                    <DataGridTextColumn Header="Номер" Binding="{Binding PlayerNumber}" Width="120"/>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </Grid>
+                    </Grid>
+                </TabItem>
+
+                <TabItem Header="Тренеры матчей">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <DockPanel Margin="0,0,0,12" HorizontalAlignment="Center">
+                            <StackPanel Orientation="Horizontal">
+                                <Button Width="130" Command="{Binding CoachMatchViewModel.LoadCommand}" Content="Загрузить" Background="#FF16A34A"/>
+                                <Button Width="130" Style="{StaticResource DangerButtonStyle}" Command="{Binding CoachMatchViewModel.DeleteCommand}" Content="Удалить" Height="41.96"/>
+                            </StackPanel>
+                        </DockPanel>
+                        <Grid Grid.Row="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="360"/>
+                                <ColumnDefinition Width="16"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Border Grid.Column="0" Style="{StaticResource CardStyle}">
+                                <StackPanel>
+                                    <TextBlock Text="Поиск и фильтрация" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
+                                    <TextBlock Text="Поиск по тренеру и команде" Style="{StaticResource FormLabelStyle}"/>
+                                    <TextBox Text="{Binding CoachMatchViewModel.SearchText, UpdateSourceTrigger=PropertyChanged}" 
+                                             Margin="0,0,0,0"/>
+
+                                    <Separator Style="{StaticResource SectionSeparatorStyle}"/>
+
+                                    <TextBlock Text="Добавить / Редактировать" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
+                                    <TextBlock Text="Матч" Style="{StaticResource FormLabelStyle}"/>
+                                    <ComboBox ItemsSource="{Binding CoachMatchViewModel.Matches}"
+                                              SelectedItem="{Binding CoachMatchViewModel.SelectedMatch}"
+                                              DisplayMemberPath="MatchDisplay"/>
+
+                                    <TextBlock Text="Тренер" Style="{StaticResource FormLabelStyle}"/>
+                                    <ComboBox ItemsSource="{Binding CoachMatchViewModel.Coaches}"
+                                              SelectedItem="{Binding CoachMatchViewModel.SelectedCoach}"
+                                              DisplayMemberPath="FullName"/>
+
+                                    <TextBlock Text="Команда" Style="{StaticResource FormLabelStyle}"/>
+                                    <ComboBox ItemsSource="{Binding CoachMatchViewModel.Countries}"
+                                              SelectedItem="{Binding CoachMatchViewModel.SelectedTeam}"
+                                              DisplayMemberPath="Name"/>
+
+                                    <StackPanel Orientation="Horizontal" Margin="0,8,0,0">
+                                        <Button Width="110" Command="{Binding CoachMatchViewModel.SaveCommand}" Content="Сохранить"/>
+                                        <Button Width="110" Command="{Binding CoachMatchViewModel.ClearCommand}" Content="Очистить"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </Border>
+
+                            <DataGrid Grid.Column="2"
+                                      ItemsSource="{Binding CoachMatchViewModel.CoachMatches}"
+                                      SelectedItem="{Binding CoachMatchViewModel.SelectedCoachMatch}"
+                                      AutoGenerateColumns="False">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="Матч" Binding="{Binding MatchName}" Width="260"/>
+                                    <DataGridTextColumn Header="Тренер команды" Binding="{Binding CoachDisplay}" Width="*"/>
+                                    <DataGridTextColumn Header="Тренер" Binding="{Binding CoachName}" Width="220"/>
+                                    <DataGridTextColumn Header="Команда" Binding="{Binding TeamName}" Width="180"/>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </Grid>
+                    </Grid>
+                </TabItem>
+
+                <TabItem Header="Статистика">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <DockPanel Margin="0,0,0,12">
+                            <TextBlock DockPanel.Dock="Left" Text="Статистика" FontSize="20" FontWeight="Bold" VerticalAlignment="Center"/>
+                            <Button DockPanel.Dock="Right" Width="130" Command="{Binding StatisticsViewModel.LoadStatisticsCommand}" Content="Загрузить" Background="#FF16A34A" Height="41.96"/>
+                        </DockPanel>
+
+                        <TabControl Grid.Row="1">
+                            <TabItem Header="Лучшие бомбардиры">
+                                <DataGrid ItemsSource="{Binding StatisticsViewModel.TopScorers}"
+                                          AutoGenerateColumns="False">
+                                    <DataGrid.Columns>
+                                        <DataGridTextColumn Header="Игрок" Width="*" Binding="{Binding PlayerName}"/>
+                                        <DataGridTextColumn Header="Голов" Width="120" Binding="{Binding GoalsCount}"/>
+                                    </DataGrid.Columns>
+                                </DataGrid>
+                            </TabItem>
+
+                            <TabItem Header="Голы по типам">
+                                <DataGrid ItemsSource="{Binding StatisticsViewModel.GoalsByType}"
+                                          AutoGenerateColumns="False">
+                                    <DataGrid.Columns>
+                                        <DataGridTextColumn Header="Тип гола" Width="*" Binding="{Binding GoalTypeName}"/>
+                                        <DataGridTextColumn Header="Количество" Width="150" Binding="{Binding Count}"/>
+                                        <DataGridTextColumn Header="Процент" Width="150" Binding="{Binding Percentage, StringFormat=0.00}"/>
+                                    </DataGrid.Columns>
+                                </DataGrid>
+                            </TabItem>
+
+                            <TabItem Header="Матчи по чемпионатам">
+                                <DataGrid ItemsSource="{Binding StatisticsViewModel.MatchesByChampionship}"
+                                          AutoGenerateColumns="False">
+                                    <DataGrid.Columns>
+                                        <DataGridTextColumn Header="Чемпионат" Width="*" Binding="{Binding ChampionshipName}"/>
+                                        <DataGridTextColumn Header="Матчей" Width="150" Binding="{Binding MatchesCount}"/>
+                                        <DataGridTextColumn Header="Всего голов" Width="150" Binding="{Binding TotalGoals}"/>
+                                    </DataGrid.Columns>
+                                </DataGrid>
+                            </TabItem>
+
+                            <TabItem Header="Таблица команд">
+                                <DataGrid ItemsSource="{Binding StatisticsViewModel.TeamStatistics}"
+                                          AutoGenerateColumns="False">
+                                    <DataGrid.Columns>
+                                        <DataGridTextColumn Header="Команда" Width="200" Binding="{Binding TeamName}"/>
+                                        <DataGridTextColumn Header="Очки" Width="100" Binding="{Binding Points}"/>
+                                        <DataGridTextColumn Header="Результат" Width="120" Binding="{Binding Record}"/>
+                                        <DataGridTextColumn Header="Голы" Width="120" Binding="{Binding GoalDifference}"/>
+                                        <DataGridTextColumn Header="Побед" Width="100" Binding="{Binding Wins}"/>
+                                        <DataGridTextColumn Header="Ничьих" Width="100" Binding="{Binding Draws}"/>
+                                        <DataGridTextColumn Header="Поражений" Width="120" Binding="{Binding Losses}"/>
+                                    </DataGrid.Columns>
+                                </DataGrid>
+                            </TabItem>
+                        </TabControl>
+                    </Grid>
+                </TabItem>
+            </TabControl>
+        </Border>
+    </Grid>
+</Window>
+
+
+
+
+
+
+

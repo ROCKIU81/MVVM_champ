@@ -1,0 +1,270 @@
+ДИАГРАММА КЛАССОВ СУЩНОСТЕЙ
+
+┌─────────────────────────────────────┐
+│           Country                   │
+├─────────────────────────────────────┤
+│ - id_country: int (PK)              │
+│ - name: string                      │
+├─────────────────────────────────────┤
+│ + GetChampionships(): List           │
+│ + GetMatches(): List                 │
+│ + GetPlayers(): List                 │
+└─────────────────────────────────────┘
+           △
+           │ 1:N
+           │
+┌─────────────────────────────────────┐
+│       Championship                  │
+├─────────────────────────────────────┤
+│ - id_championship: int (PK)         │
+│ - year_played: int                  │
+│ - host_city: string                 │
+│ - id_country: int (FK)              │
+├─────────────────────────────────────┤
+│ + GetMatches(): List                │
+│ + GetTotalGoals(): int              │
+│ + ChampionshipDisplay: string       │
+└─────────────────────────────────────┘
+           △
+           │ 1:N
+           │
+┌─────────────────────────────────────┐
+│           Match                     │
+├─────────────────────────────────────┤
+│ - id_match: int (PK)                │
+│ - championship_id: int (FK)         │
+│ - team1_id: int (FK)                │
+│ - team2_id: int (FK)                │
+│ - team1_score: int                  │
+│ - team2_score: int                  │
+├─────────────────────────────────────┤
+│ + GetGoals(): List                  │
+│ + GetPlayers(): List                │
+│ + GetCoaches(): List                │
+│ + MatchDisplay: string              │
+│ + ScoreDisplay: string              │
+└─────────────────────────────────────┘
+      △              △
+      │ 1:N          │ 1:N
+      │              │
+      └──────┬───────┘
+             │
+┌─────────────────────────────────────┐
+│           Goal                      │
+├─────────────────────────────────────┤
+│ - id_goal: int (PK)                 │
+│ - match_id: int (FK)                │
+│ - player_id: int (FK)               │
+│ - minute: int                       │
+│ - goal_type_id: int (FK)            │
+├─────────────────────────────────────┤
+│ + GoalDisplay: string               │
+│ + MinuteDisplay: string             │
+│ + PlayerName: string                │
+│ + GoalTypeName: string              │
+│ + MatchName: string                 │
+└─────────────────────────────────────┘
+      △              △              △
+      │ 1:N          │ 1:N          │ 1:N
+      │              │              │
+      └──────┬───────┴──────┬───────┘
+             │              │
+┌─────────────────────────────────────┐
+│           Person                    │
+├─────────────────────────────────────┤
+│ - id_person: int (PK)               │
+│ - full_name: string                 │
+│ - date_of_birth: DateTime           │
+│ - status: string                    │
+├─────────────────────────────────────┤
+│ + GetGoals(): List                  │
+│ + GetMatches(): List                │
+└─────────────────────────────────────┘
+      △              △
+      │ 1:N          │ 1:N
+      │              │
+      └──────┬───────┘
+             │
+┌─────────────────────────────────────┐
+│        GoalType                     │
+├─────────────────────────────────────┤
+│ - id_goal_type: int (PK)            │
+│ - type_name: string                 │
+│ - description: string               │
+├─────────────────────────────────────┤
+│ + GetGoals(): List                  │
+└─────────────────────────────────────┘
+           △
+           │ 1:N
+           │
+┌─────────────────────────────────────┐
+│       PlayerSquad                   │
+├─────────────────────────────────────┤
+│ - id_record: int (PK)               │
+│ - match_id: int (FK)                │
+│ - player_id: int (FK)               │
+│ - team_id: int (FK)                 │
+│ - player_number: int                │
+├─────────────────────────────────────┤
+│ + SquadDisplay: string              │
+│ + PlayerName: string                │
+│ + TeamName: string                  │
+│ + MatchName: string                 │
+└─────────────────────────────────────┘
+      △              △              △
+      │ 1:N          │ 1:N          │ 1:N
+      │              │              │
+      └──────┬───────┴──────┬───────┘
+             │              │
+┌─────────────────────────────────────┐
+│       CoachMatch                    │
+├─────────────────────────────────────┤
+│ - id_record: int (PK)               │
+│ - match_id: int (FK)                │
+│ - coach_id: int (FK)                │
+│ - team_id: int (FK)                 │
+├─────────────────────────────────────┤
+│ + CoachDisplay: string              │
+│ + CoachName: string                 │
+│ + TeamName: string                  │
+│ + MatchName: string                 │
+└─────────────────────────────────────┘
+      △              △              △
+      │ 1:N          │ 1:N          │ 1:N
+      │              │              │
+      └──────┬───────┴──────┬───────┘
+             │              │
+           Match          Person/Country
+
+
+ДИАГРАММА ВЗАИМОСВЯЗЕЙ СУЩНОСТЕЙ
+
+                    ┌──────────────┐
+                    │   Country    │
+                    └──────────────┘
+                          △
+                          │ 1:N
+                          │
+                    ┌──────────────┐
+                    │Championship  │
+                    └──────────────┘
+                          △
+                          │ 1:N
+                          │
+                    ┌──────────────┐
+                    │    Match     │
+                    └──────────────┘
+                    △              △
+                    │ 1:N          │ 1:N
+                    │              │
+              ┌─────┴──────┐  ┌────┴──────┐
+              │            │  │           │
+         ┌────────┐   ┌────────┐   ┌──────────┐
+         │  Goal  │   │ Player │   │GoalType  │
+         │        │   │ Squad  │   │          │
+         └────────┘   └────────┘   └──────────┘
+              │            │
+              │            │
+         ┌────────┐   ┌────────┐
+         │ Person │   │Country │
+         └────────┘   └────────┘
+              │
+         ┌────────┐
+         │ Coach  │
+         │ Match  │
+         └────────┘
+
+
+ДИАГРАММА КЛАССОВ VIEWMODEL
+
+┌─────────────────────────────────────┐
+│      MainViewModel                  │
+├─────────────────────────────────────┤
+│ - CountryViewModel: INotifyPropertyChanged
+│ - ChampionshipViewModel             │
+│ - MatchViewModel                    │
+│ - PersonViewModel                   │
+│ - GoalViewModel                     │
+│ - GoalTypeViewModel                 │
+│ - PlayerSquadViewModel              │
+│ - CoachMatchViewModel               │
+│ - StatisticsViewModel               │
+├─────────────────────────────────────┤
+│ + LoadData(): void                  │
+│ + RefreshAll(): void                │
+└─────────────────────────────────────┘
+           △
+           │ Composition
+           │
+    ┌──────┴──────┬──────────┬──────────┐
+    │             │          │          │
+┌───────────┐ ┌──────────┐ ┌────────┐ ┌──────────┐
+│ Country   │ │Championship
+│ ViewModel │ │ ViewModel │ │ Match  │ │ Person   │
+│           │ │          │ │ViewModel
+│ ViewModel │
+├───────────┤ ├──────────┤ ├────────┤ ├──────────┤
+│ - Items   │ │ - Items  │ │- Items │ │ - Items  │
+│ - Selected│ │- Selected│ │-Selected
+│ - Search  │ │- Search  │ │- Search│ │ - Search │
+├───────────┤ ├──────────┤ ├────────┤ ├──────────┤
+│ + Load()  │ │ + Load() │ │+ Load()│ │ + Load() │
+│ + Save()  │ │ + Save() │ │+ Save()│ │ + Save() │
+│ + Delete()│ │ + Delete()
+│ + Clear() │ │ + Clear()│ │+ Clear()
+│ + Filter()│ │ + Filter()
+└───────────┘ └──────────┘ └────────┘ └──────────┘
+    │             │          │          │
+    └─────────────┴──────────┴──────────┘
+                  │
+         ┌────────┴────────┐
+         │                 │
+    ┌─────────┐      ┌──────────────┐
+    │   Goal  │      │ Statistics   │
+    │ViewModel
+    │          │      │ ViewModel    │
+    ├─────────┤      ├──────────────┤
+    │ - Items │      │ - TopScorers │
+    │ - Search│      │ - GoalsByType│
+    ├─────────┤      │ - MatchesByChamp
+    │ + Load()│      │ - TeamStats  │
+    │ + Save()│      ├──────────────┤
+    │ + Delete()
+    │ + Filter()
+    │          │      │ + LoadStats()│
+    └─────────┘      │ + Refresh()  │
+                     └──────────────┘
+
+
+ДИАГРАММА СЕРВИСОВ
+
+┌─────────────────────────────────────┐
+│      ServiceContainer               │
+├─────────────────────────────────────┤
+│ - IServiceProvider                  │
+├─────────────────────────────────────┤
+│ + GetService<T>(): T                │
+│ + RegisterRepositories(): void      │
+│ + RegisterViewModels(): void        │
+│ + RegisterServices(): void          │
+└─────────────────────────────────────┘
+           △
+           │ Composition
+           │
+    ┌──────┴──────┬──────────┬──────────┐
+    │             │          │          │
+┌──────────┐ ┌──────────┐ ┌────────┐ ┌──────────┐
+│Repository│ │ CRUD     │ │Statistics
+│ Services │ │ Service  │ │ Service  │ │ Other    │
+│          │ │          │ │          │ │ Services │
+├──────────┤ ├──────────┤ ├────────┤ ├──────────┤
+│ - Country│ │ - Save() │ │- GetTop│ │ - Config │
+│ - Match  │ │ - Delete()
+│ - Person │ │ - Update()
+│ - Goal   │ │ - Add()  │ │ Scorers()│ │ - Logger │
+├──────────┤ ├──────────┤ ├────────┤ ├──────────┤
+│ + Get()  │ │ + Execute()
+│ + Add()  │ │          │ │+ Calculate()
+│ + Update()
+│ + Delete()│ │          │ │          │ │          │
+└──────────┘ └──────────┘ └────────┘ └──────────┘

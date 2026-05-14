@@ -1,0 +1,177 @@
+@startuml BusinessLogicAssemblyDetailed
+!theme plain
+skinparam backgroundColor #FEFEFE
+skinparam classBackgroundColor #F8F0E8
+skinparam classBorderColor #CC6600
+skinparam arrowColor #CC6600
+
+package "BUSINESS LOGIC ASSEMBLY" {
+    
+    package "Services" {
+        class CrudService {
+            - countryRepository: ICountryRepository
+            - championshipRepository: IChampionshipRepository
+            - matchRepository: IMatchRepository
+            - personRepository: IPersonRepository
+            - goalRepository: IGoalRepository
+            - goalTypeRepository: IGoalTypeRepository
+            - playerSquadRepository: IPlayerSquadRepository
+            - coachMatchRepository: ICoachMatchRepository
+            --
+            + SaveCountryAsync(Country): Task
+            + DeleteCountryAsync(int): Task
+            + SaveChampionshipAsync(Championship): Task
+            + DeleteChampionshipAsync(int): Task
+            + SaveMatchAsync(Match): Task
+            + DeleteMatchAsync(int): Task
+            + SaveGoalAsync(Goal): Task
+            + DeleteGoalAsync(int): Task
+            + SavePersonAsync(Person): Task
+            + DeletePersonAsync(int): Task
+            + SavePlayerSquadAsync(PlayerSquad): Task
+            + DeletePlayerSquadAsync(int): Task
+            + SaveCoachMatchAsync(CoachMatch): Task
+            + DeleteCoachMatchAsync(int): Task
+        }
+        
+        class StatisticsService {
+            - goalRepository: IGoalRepository
+            - matchRepository: IMatchRepository
+            - championshipRepository: IChampionshipRepository
+            - goalTypeRepository: IGoalTypeRepository
+            --
+            + GetTopScorersAsync(int): Task<List<TopScorerStatistic>>
+            + GetGoalsByTypeAsync(): Task<List<GoalTypeStatistic>>
+            + GetMatchesByChampionshipAsync(): Task<List<ChampionshipMatchStatistic>>
+            + GetTeamStatisticsAsync(): Task<List<TeamStatistic>>
+        }
+    }
+    
+    package "Data Models" {
+        class TopScorerStatistic {
+            + PlayerId: int
+            + PlayerName: string
+            + GoalsCount: int
+        }
+        
+        class GoalTypeStatistic {
+            + GoalTypeId: int
+            + GoalTypeName: string
+            + Count: int
+            + Percentage: double
+        }
+        
+        class ChampionshipMatchStatistic {
+            + ChampionshipId: int
+            + ChampionshipName: string
+            + MatchesCount: int
+            + TotalGoals: int
+        }
+        
+        class TeamStatistic {
+            + TeamId: int
+            + TeamName: string
+            + Wins: int
+            + Draws: int
+            + Losses: int
+            + GoalsFor: int
+            + GoalsAgainst: int
+            + Points: int
+            + Record: string
+            + GoalDifference: string
+        }
+    }
+}
+
+package "DATA ACCESS LAYER" {
+    
+    package "Repository Interfaces" {
+        interface ICountryRepository {
+            + GetAllAsync(): Task<List<Country>>
+            + GetByIdAsync(int): Task<Country>
+            + AddAsync(Country): Task
+            + UpdateAsync(Country): Task
+            + DeleteAsync(int): Task
+        }
+        
+        interface IChampionshipRepository {
+            + GetAllAsync(): Task<List<Championship>>
+            + GetByIdAsync(int): Task<Championship>
+            + AddAsync(Championship): Task
+            + UpdateAsync(Championship): Task
+            + DeleteAsync(int): Task
+        }
+        
+        interface IMatchRepository {
+            + GetAllAsync(): Task<List<Match>>
+            + GetByIdAsync(int): Task<Match>
+            + AddAsync(Match): Task
+            + UpdateAsync(Match): Task
+            + DeleteAsync(int): Task
+        }
+        
+        interface IPersonRepository {
+            + GetAllAsync(): Task<List<Person>>
+            + GetByIdAsync(int): Task<Person>
+            + AddAsync(Person): Task
+            + UpdateAsync(Person): Task
+            + DeleteAsync(int): Task
+        }
+        
+        interface IGoalRepository {
+            + GetAllAsync(): Task<List<Goal>>
+            + GetByIdAsync(int): Task<Goal>
+            + AddAsync(Goal): Task
+            + UpdateAsync(Goal): Task
+            + DeleteAsync(int): Task
+        }
+        
+        interface IGoalTypeRepository {
+            + GetAllAsync(): Task<List<GoalType>>
+            + GetByIdAsync(int): Task<GoalType>
+            + AddAsync(GoalType): Task
+            + UpdateAsync(GoalType): Task
+            + DeleteAsync(int): Task
+        }
+        
+        interface IPlayerSquadRepository {
+            + GetAllAsync(): Task<List<PlayerSquad>>
+            + GetByIdAsync(int): Task<PlayerSquad>
+            + AddAsync(PlayerSquad): Task
+            + UpdateAsync(PlayerSquad): Task
+            + DeleteAsync(int): Task
+        }
+        
+        interface ICoachMatchRepository {
+            + GetAllAsync(): Task<List<CoachMatch>>
+            + GetByIdAsync(int): Task<CoachMatch>
+            + AddAsync(CoachMatch): Task
+            + UpdateAsync(CoachMatch): Task
+            + DeleteAsync(int): Task
+        }
+    }
+}
+
+' CrudService зависит от репозиториев
+CrudService --> ICountryRepository : uses
+CrudService --> IChampionshipRepository : uses
+CrudService --> IMatchRepository : uses
+CrudService --> IPersonRepository : uses
+CrudService --> IGoalRepository : uses
+CrudService --> IGoalTypeRepository : uses
+CrudService --> IPlayerSquadRepository : uses
+CrudService --> ICoachMatchRepository : uses
+
+' StatisticsService зависит от репозиториев
+StatisticsService --> IGoalRepository : uses
+StatisticsService --> IMatchRepository : uses
+StatisticsService --> IChampionshipRepository : uses
+StatisticsService --> IGoalTypeRepository : uses
+
+' StatisticsService возвращает модели данных
+StatisticsService --> TopScorerStatistic : returns
+StatisticsService --> GoalTypeStatistic : returns
+StatisticsService --> ChampionshipMatchStatistic : returns
+StatisticsService --> TeamStatistic : returns
+
+@enduml

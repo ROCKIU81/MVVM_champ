@@ -1,0 +1,106 @@
+@startuml ModelLayer
+!theme plain
+skinparam backgroundColor #FEFEFE
+skinparam classBackgroundColor #F8E8E8
+skinparam classBorderColor #CC0000
+skinparam arrowColor #CC0000
+
+package "MODEL LAYER" {
+    class Country {
+        + Id: int
+        + Name: string
+        + Championships: List<Championship>
+        + Matches: List<Match>
+        + PlayerSquads: List<PlayerSquad>
+        + CoachMatches: List<CoachMatch>
+    }
+    
+    class Championship {
+        + Id: int
+        + Year: int
+        + City: string
+        + CountryId: int
+        + Country: Country
+        + Matches: List<Match>
+    }
+    
+    class Match {
+        + Id: int
+        + ChampionshipId: int
+        + Team1Id: int
+        + Team2Id: int
+        + Team1Score: int
+        + Team2Score: int
+        + Championship: Championship
+        + Team1: Country
+        + Team2: Country
+        + Goals: List<Goal>
+        + Players: List<PlayerSquad>
+        + Coaches: List<CoachMatch>
+    }
+    
+    class Person {
+        + Id: int
+        + FullName: string
+        + DateOfBirth: DateTime
+        + Status: string
+        + Goals: List<Goal>
+        + PlayerSquads: List<PlayerSquad>
+        + CoachMatches: List<CoachMatch>
+    }
+    
+    class Goal {
+        + Id: int
+        + MatchId: int
+        + PlayerId: int
+        + Minute: int
+        + GoalTypeId: int
+        + Match: Match
+        + Player: Person
+        + GoalType: GoalType
+    }
+    
+    class GoalType {
+        + Id: int
+        + Name: string
+        + Description: string
+        + Goals: List<Goal>
+    }
+    
+    class PlayerSquad {
+        + Id: int
+        + MatchId: int
+        + PlayerId: int
+        + TeamId: int
+        + PlayerNumber: int
+        + Match: Match
+        + Player: Person
+        + Team: Country
+    }
+    
+    class CoachMatch {
+        + Id: int
+        + MatchId: int
+        + CoachId: int
+        + TeamId: int
+        + Match: Match
+        + Coach: Person
+        + Team: Country
+    }
+}
+
+Country "1" -- "*" Championship : organizes
+Championship "1" -- "*" Match : contains
+Country "1" -- "*" Match : team1
+Country "1" -- "*" Match : team2
+Match "1" -- "*" Goal : has
+Person "1" -- "*" Goal : scores
+GoalType "1" -- "*" Goal : type
+Match "1" -- "*" PlayerSquad : includes
+Person "1" -- "*" PlayerSquad : plays
+Country "1" -- "*" PlayerSquad : team
+Match "1" -- "*" CoachMatch : manages
+Person "1" -- "*" CoachMatch : coaches
+Country "1" -- "*" CoachMatch : team
+
+@enduml

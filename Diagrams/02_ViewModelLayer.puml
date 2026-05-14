@@ -1,0 +1,65 @@
+@startuml ViewModelLayer
+!theme plain
+skinparam backgroundColor #FEFEFE
+skinparam classBackgroundColor #F0E8F8
+skinparam classBorderColor #6600CC
+skinparam arrowColor #6600CC
+
+package "VIEWMODEL LAYER" {
+    class BaseViewModel {
+        # PropertyChanged: event
+        # OnPropertyChanged(string): void
+    }
+    
+    class MainViewModel
+    class CountryViewModel
+    class ChampionshipViewModel
+    class MatchViewModel
+    class PersonViewModel
+    class GoalViewModel
+    class GoalTypeViewModel
+    class PlayerSquadViewModel
+    class CoachMatchViewModel
+    class StatisticsViewModel
+    
+    class RelayCommand {
+        + Execute(object): void
+        + CanExecute(object): bool
+    }
+}
+
+BaseViewModel <|-- MainViewModel
+BaseViewModel <|-- CountryViewModel
+BaseViewModel <|-- ChampionshipViewModel
+BaseViewModel <|-- MatchViewModel
+BaseViewModel <|-- PersonViewModel
+BaseViewModel <|-- GoalViewModel
+BaseViewModel <|-- GoalTypeViewModel
+BaseViewModel <|-- PlayerSquadViewModel
+BaseViewModel <|-- CoachMatchViewModel
+BaseViewModel <|-- StatisticsViewModel
+
+MainViewModel *-- CountryViewModel
+MainViewModel *-- ChampionshipViewModel
+MainViewModel *-- MatchViewModel
+MainViewModel *-- PersonViewModel
+MainViewModel *-- GoalViewModel
+MainViewModel *-- GoalTypeViewModel
+MainViewModel *-- PlayerSquadViewModel
+MainViewModel *-- CoachMatchViewModel
+MainViewModel *-- StatisticsViewModel
+
+CountryViewModel --> RelayCommand : LoadCommand
+CountryViewModel --> RelayCommand : SaveCommand
+CountryViewModel --> RelayCommand : DeleteCommand
+CountryViewModel --> RelayCommand : ClearCommand
+
+MatchViewModel --> RelayCommand : LoadCommand
+MatchViewModel --> RelayCommand : SaveCommand
+MatchViewModel --> RelayCommand : DeleteCommand
+MatchViewModel --> RelayCommand : ClearCommand
+
+StatisticsViewModel --> RelayCommand : LoadStatisticsCommand
+StatisticsViewModel --> RelayCommand : RefreshCommand
+
+@enduml

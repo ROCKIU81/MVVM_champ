@@ -1,0 +1,64 @@
+@startuml MVVMInteraction
+!theme plain
+skinparam backgroundColor #FEFEFE
+skinparam classBackgroundColor #F0F0F0
+skinparam classBorderColor #333333
+skinparam arrowColor #333333
+
+package "VIEW LAYER" {
+    class CountryView
+}
+
+package "VIEWMODEL LAYER" {
+    class CountryViewModel
+    class RelayCommand
+}
+
+package "BUSINESS LOGIC LAYER" {
+    class CrudService
+}
+
+package "DATA ACCESS LAYER" {
+    interface ICountryRepository
+    class CountryRepository
+}
+
+package "MODEL LAYER" {
+    class Country
+}
+
+package "DATABASE" {
+    database PostgreSQL
+}
+
+' View to ViewModel
+CountryView --> CountryViewModel : DataContext\nBinding
+
+' ViewModel to RelayCommand
+CountryViewModel --> RelayCommand : LoadCommand\nSaveCommand\nDeleteCommand
+
+' RelayCommand to ViewModel Methods
+RelayCommand --> CountryViewModel : Execute()
+
+' ViewModel to Business Logic
+CountryViewModel --> CrudService : SaveCountryAsync()\nDeleteCountryAsync()
+
+' Business Logic to Data Access
+CrudService --> ICountryRepository : AddAsync()\nUpdateAsync()\nDeleteAsync()
+
+' Data Access Interface to Implementation
+ICountryRepository <|.. CountryRepository
+
+' Repository to Model
+CountryRepository --> Country : Create/Update/Delete
+
+' Repository to Database
+CountryRepository --> PostgreSQL : SQL Queries
+
+' Data Flow Back
+PostgreSQL --> CountryRepository : Data
+CountryRepository --> CrudService : Task<Country>
+CrudService --> CountryViewModel : Update ObservableCollection
+CountryViewModel --> CountryView : PropertyChanged Event
+
+@enduml

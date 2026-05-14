@@ -1,0 +1,71 @@
+Таблица 4.1 – Структура таблицы "country"
+Атрибут	Тип данных	Ограничения	Описание
+id_country	SERIAL	PRIMARY KEY	Идентификатор страны
+name	VARCHAR(100)	NOT NULL, UNIQUE	Название страны
+
+Таблица 4.2 – Структура таблицы "championship"
+Атрибут	Тип данных	Ограничения	Описание
+id_championship	SERIAL	PRIMARY KEY	Идентификатор чемпионата
+year_played	INT	NOT NULL, UNIQUE	Год проведения чемпионата
+host_city	VARCHAR(100)	NOT NULL	Город-хозяин чемпионата
+id_country	INT	NOT NULL, FOREIGN KEY	Идентификатор страны-организатора
+
+Таблица 4.3 – Структура таблицы "match"
+Атрибут	Тип данных	Ограничения	Описание
+id_match	SERIAL	PRIMARY KEY	Идентификатор матча
+championship_id	INT	NOT NULL, FOREIGN KEY	Идентификатор чемпионата
+team1_id	INT	NOT NULL, FOREIGN KEY	Идентификатор первой команды
+team2_id	INT	NOT NULL, FOREIGN KEY	Идентификатор второй команды
+team1_score	INT	NOT NULL, DEFAULT 0	Счёт первой команды
+team2_score	INT	NOT NULL, DEFAULT 0	Счёт второй команды
+
+Таблица 4.4 – Структура таблицы "person"
+Атрибут	Тип данных	Ограничения	Описание
+id_person	SERIAL	PRIMARY KEY	Идентификатор человека
+full_name	VARCHAR(150)	NOT NULL	Полное имя игрока или тренера
+date_of_birth	DATE	NULL	Дата рождения
+status	VARCHAR(50)	NOT NULL	Статус (player или coach)
+
+Таблица 4.5 – Структура таблицы "goal_type"
+Атрибут	Тип данных	Ограничения	Описание
+id_goal_type	SERIAL	PRIMARY KEY	Идентификатор типа гола
+type_name	VARCHAR(100)	NOT NULL, UNIQUE	Название типа гола
+description	VARCHAR(255)	NULL	Описание типа гола
+
+Таблица 4.6 – Структура таблицы "goal"
+Атрибут	Тип данных	Ограничения	Описание
+id_goal	SERIAL	PRIMARY KEY	Идентификатор гола
+match_id	INT	NOT NULL, FOREIGN KEY	Идентификатор матча
+player_id	INT	NOT NULL, FOREIGN KEY	Идентификатор игрока
+minute	INT	NOT NULL	Минута забивания гола
+goal_type_id	INT	NOT NULL, FOREIGN KEY	Идентификатор типа гола
+
+Таблица 4.7 – Структура таблицы "player_squad"
+Атрибут	Тип данных	Ограничения	Описание
+id_record	SERIAL	PRIMARY KEY	Идентификатор записи
+match_id	INT	NOT NULL, FOREIGN KEY	Идентификатор матча
+player_id	INT	NOT NULL, FOREIGN KEY	Идентификатор игрока
+team_id	INT	NOT NULL, FOREIGN KEY	Идентификатор команды
+player_number	INT	NOT NULL	Номер игрока в команде
+
+Таблица 4.8 – Структура таблицы "coach_match"
+Атрибут	Тип данных	Ограничения	Описание
+id_record	SERIAL	PRIMARY KEY	Идентификатор записи
+match_id	INT	NOT NULL, FOREIGN KEY	Идентификатор матча
+coach_id	INT	NOT NULL, FOREIGN KEY	Идентификатор тренера
+team_id	INT	NOT NULL, FOREIGN KEY	Идентификатор команды
+
+Таблица 4.9 – Связи между таблицами
+Таблица 1	Таблица 2	Тип связи	Описание
+country	championship	1:N	Одна страна организует много чемпионатов
+championship	match	1:N	Один чемпионат включает много матчей
+country	match	1:N	Одна страна участвует в много матчах
+match	goal	1:N	В одном матче забивается много голов
+person	goal	1:N	Один игрок может забить много голов
+goal_type	goal	1:N	Один тип гола используется в много голах
+match	player_squad	1:N	В одном матче участвует много игроков
+person	player_squad	1:N	Один игрок участвует в много матчах
+country	player_squad	1:N	Одна команда участвует в много матчах
+match	coach_match	1:N	В одном матче может быть несколько тренеров
+person	coach_match	1:N	Один тренер руководит много матчей
+country	coach_match	1:N	Одна команда имеет много тренеров

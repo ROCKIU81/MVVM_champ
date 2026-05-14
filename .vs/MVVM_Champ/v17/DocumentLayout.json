@@ -1,0 +1,694 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\App.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MVVM_Champ\\App.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\MVVM_Champ.csproj.user||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MVVM_Champ\\MVVM_Champ.csproj.user||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ.Tests\\CrudServiceTests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MVVM_Champ.Tests\\CrudServiceTests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ.Tests\\CountryTests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MVVM_Champ.Tests\\CountryTests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ.Tests\\ChampionshipTests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MVVM_Champ.Tests\\ChampionshipTests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\MVVMArchitecture.puml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MVVM_Champ\\MVVMArchitecture.puml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ.Tests\\UnitTests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MVVM_Champ.Tests\\UnitTests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\obj\\MVVM_Champ.csproj.nuget.g.props||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MVVM_Champ\\obj\\MVVM_Champ.csproj.nuget.g.props||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\WorldCupMVVM\\WorldCupMVVM\\Models\\ICountry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\WorldCupMVVM\\WorldCupMVVM\\Models\\Country.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\MainWindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MVVM_Champ\\MainWindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\MainWindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MVVM_Champ\\MainWindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\view\\StartupWindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MVVM_Champ\\view\\StartupWindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\services\\TestDataService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MVVM_Champ\\services\\TestDataService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\viewmodels\\MainViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MVVM_Champ\\viewmodels\\MainViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\AssemblyInfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MVVM_Champ\\AssemblyInfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\ServiceContainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MVVM_Champ\\ServiceContainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\models\\Match.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MVVM_Champ\\models\\Match.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\models\\Goal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MVVM_Champ\\models\\Goal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\models\\IMatchRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MVVM_Champ\\models\\IMatchRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\models\\ICoachMatchRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MVVM_Champ\\models\\ICoachMatchRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\models\\IChampionshipRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MVVM_Champ\\models\\IChampionshipRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\services\\CrudService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MVVM_Champ\\services\\CrudService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\services\\CoachMatchRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MVVM_Champ\\services\\CoachMatchRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\services\\GoalRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MVVM_Champ\\services\\GoalRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\viewmodels\\ChampionshipViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MVVM_Champ\\viewmodels\\ChampionshipViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\models\\IPersonRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MVVM_Champ\\models\\IPersonRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\App.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MVVM_Champ\\App.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\App.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MVVM_Champ\\App.xaml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\MVVM_Champ.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MVVM_Champ\\MVVM_Champ.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\models\\IGoalRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MVVM_Champ\\models\\IGoalRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\models\\Championship.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MVVM_Champ\\models\\Championship.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\services\\ChampionshipRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MVVM_Champ\\services\\ChampionshipRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\viewmodels\\ViewModelBase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MVVM_Champ\\viewmodels\\ViewModelBase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\viewmodels\\RelayCommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MVVM_Champ\\viewmodels\\RelayCommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\viewmodels\\CountryViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MVVM_Champ\\viewmodels\\CountryViewModel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\models\\ICountryRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MVVM_Champ\\models\\ICountryRepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\models\\Country.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MVVM_Champ\\models\\Country.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\services\\PostgresRep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MVVM_Champ\\services\\PostgresRep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\view\\MainWindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MVVM_Champ\\view\\MainWindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 219,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 34,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "StartupWindow.xaml.cs",
+              "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\view\\StartupWindow.xaml.cs",
+              "RelativeDocumentMoniker": "MVVM_Champ\\view\\StartupWindow.xaml.cs",
+              "ToolTip": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\view\\StartupWindow.xaml.cs",
+              "RelativeToolTip": "MVVM_Champ\\view\\StartupWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-13T15:14:03.446Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "TestDataService.cs",
+              "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\services\\TestDataService.cs",
+              "RelativeDocumentMoniker": "MVVM_Champ\\services\\TestDataService.cs",
+              "ToolTip": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\services\\TestDataService.cs",
+              "RelativeToolTip": "MVVM_Champ\\services\\TestDataService.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAxwAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-13T15:10:42.769Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "MainViewModel.cs",
+              "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\viewmodels\\MainViewModel.cs",
+              "RelativeDocumentMoniker": "MVVM_Champ\\viewmodels\\MainViewModel.cs",
+              "ToolTip": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\viewmodels\\MainViewModel.cs",
+              "RelativeToolTip": "MVVM_Champ\\viewmodels\\MainViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-13T09:21:29.084Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AssemblyInfo.cs",
+              "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\AssemblyInfo.cs",
+              "RelativeDocumentMoniker": "MVVM_Champ\\AssemblyInfo.cs",
+              "ToolTip": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\AssemblyInfo.cs",
+              "RelativeToolTip": "MVVM_Champ\\AssemblyInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-13T05:44:24.936Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CrudServiceTests.cs",
+              "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ.Tests\\CrudServiceTests.cs",
+              "RelativeDocumentMoniker": "MVVM_Champ.Tests\\CrudServiceTests.cs",
+              "ToolTip": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ.Tests\\CrudServiceTests.cs",
+              "RelativeToolTip": "MVVM_Champ.Tests\\CrudServiceTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-13T05:33:52.827Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CountryTests.cs",
+              "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ.Tests\\CountryTests.cs",
+              "RelativeDocumentMoniker": "MVVM_Champ.Tests\\CountryTests.cs",
+              "ToolTip": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ.Tests\\CountryTests.cs",
+              "RelativeToolTip": "MVVM_Champ.Tests\\CountryTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-13T05:33:39.23Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ChampionshipTests.cs",
+              "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ.Tests\\ChampionshipTests.cs",
+              "RelativeDocumentMoniker": "MVVM_Champ.Tests\\ChampionshipTests.cs",
+              "ToolTip": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ.Tests\\ChampionshipTests.cs",
+              "RelativeToolTip": "MVVM_Champ.Tests\\ChampionshipTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-13T05:33:07.931Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MVVMArchitecture.puml",
+              "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\MVVMArchitecture.puml",
+              "RelativeDocumentMoniker": "MVVM_Champ\\MVVMArchitecture.puml",
+              "ToolTip": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\MVVMArchitecture.puml",
+              "RelativeToolTip": "MVVM_Champ\\MVVMArchitecture.puml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-05-13T05:28:16.904Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UnitTests.cs",
+              "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ.Tests\\UnitTests.cs",
+              "RelativeDocumentMoniker": "MVVM_Champ.Tests\\UnitTests.cs",
+              "ToolTip": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ.Tests\\UnitTests.cs",
+              "RelativeToolTip": "MVVM_Champ.Tests\\UnitTests.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T17:59:26.439Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ServiceContainer.cs",
+              "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\ServiceContainer.cs",
+              "RelativeDocumentMoniker": "MVVM_Champ\\ServiceContainer.cs",
+              "ToolTip": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\ServiceContainer.cs",
+              "RelativeToolTip": "MVVM_Champ\\ServiceContainer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-30T04:32:28.649Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Match.cs",
+              "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\models\\Match.cs",
+              "RelativeDocumentMoniker": "MVVM_Champ\\models\\Match.cs",
+              "ToolTip": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\models\\Match.cs",
+              "RelativeToolTip": "MVVM_Champ\\models\\Match.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-30T04:03:17.84Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Goal.cs",
+              "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\models\\Goal.cs",
+              "RelativeDocumentMoniker": "MVVM_Champ\\models\\Goal.cs",
+              "ToolTip": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\models\\Goal.cs",
+              "RelativeToolTip": "MVVM_Champ\\models\\Goal.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-30T03:38:55.488Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "IMatchRepository.cs",
+              "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\models\\IMatchRepository.cs",
+              "RelativeDocumentMoniker": "MVVM_Champ\\models\\IMatchRepository.cs",
+              "ToolTip": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\models\\IMatchRepository.cs",
+              "RelativeToolTip": "MVVM_Champ\\models\\IMatchRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-30T03:36:15.309Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ICoachMatchRepository.cs",
+              "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\models\\ICoachMatchRepository.cs",
+              "RelativeDocumentMoniker": "MVVM_Champ\\models\\ICoachMatchRepository.cs",
+              "ToolTip": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\models\\ICoachMatchRepository.cs",
+              "RelativeToolTip": "MVVM_Champ\\models\\ICoachMatchRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-30T03:36:12.351Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "IChampionshipRepository.cs",
+              "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\models\\IChampionshipRepository.cs",
+              "RelativeDocumentMoniker": "MVVM_Champ\\models\\IChampionshipRepository.cs",
+              "ToolTip": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\models\\IChampionshipRepository.cs",
+              "RelativeToolTip": "MVVM_Champ\\models\\IChampionshipRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-30T03:36:03.304Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "CrudService.cs",
+              "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\services\\CrudService.cs",
+              "RelativeDocumentMoniker": "MVVM_Champ\\services\\CrudService.cs",
+              "ToolTip": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\services\\CrudService.cs",
+              "RelativeToolTip": "MVVM_Champ\\services\\CrudService.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAwG0AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-30T03:34:46.494Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "CoachMatchRepository.cs",
+              "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\services\\CoachMatchRepository.cs",
+              "RelativeDocumentMoniker": "MVVM_Champ\\services\\CoachMatchRepository.cs",
+              "ToolTip": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\services\\CoachMatchRepository.cs",
+              "RelativeToolTip": "MVVM_Champ\\services\\CoachMatchRepository.cs",
+              "ViewState": "AgIAAL4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-30T03:34:33.701Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "GoalRepository.cs",
+              "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\services\\GoalRepository.cs",
+              "RelativeDocumentMoniker": "MVVM_Champ\\services\\GoalRepository.cs",
+              "ToolTip": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\services\\GoalRepository.cs",
+              "RelativeToolTip": "MVVM_Champ\\services\\GoalRepository.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-30T02:50:14.108Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "ChampionshipViewModel.cs",
+              "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\viewmodels\\ChampionshipViewModel.cs",
+              "RelativeDocumentMoniker": "MVVM_Champ\\viewmodels\\ChampionshipViewModel.cs",
+              "ToolTip": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\viewmodels\\ChampionshipViewModel.cs",
+              "RelativeToolTip": "MVVM_Champ\\viewmodels\\ChampionshipViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGgAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-29T05:01:50.298Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "IPersonRepository.cs",
+              "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\models\\IPersonRepository.cs",
+              "RelativeDocumentMoniker": "MVVM_Champ\\models\\IPersonRepository.cs",
+              "ToolTip": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\models\\IPersonRepository.cs",
+              "RelativeToolTip": "MVVM_Champ\\models\\IPersonRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-29T05:01:45.126Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "App.config",
+              "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\App.config",
+              "RelativeDocumentMoniker": "MVVM_Champ\\App.config",
+              "ToolTip": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\App.config",
+              "RelativeToolTip": "MVVM_Champ\\App.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2026-04-28T10:40:24.192Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "App.xaml",
+              "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\App.xaml",
+              "RelativeDocumentMoniker": "MVVM_Champ\\App.xaml",
+              "ToolTip": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\App.xaml",
+              "RelativeToolTip": "MVVM_Champ\\App.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-04-27T10:04:15.841Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MVVM_Champ.csproj.user",
+              "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\MVVM_Champ.csproj.user",
+              "RelativeDocumentMoniker": "MVVM_Champ\\MVVM_Champ.csproj.user",
+              "ToolTip": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\MVVM_Champ.csproj.user",
+              "RelativeToolTip": "MVVM_Champ\\MVVM_Champ.csproj.user",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003464|",
+              "WhenOpened": "2026-04-27T10:04:10.299Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "MVVM_Champ.csproj",
+              "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\MVVM_Champ.csproj",
+              "RelativeDocumentMoniker": "MVVM_Champ\\MVVM_Champ.csproj",
+              "ToolTip": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\MVVM_Champ.csproj",
+              "RelativeToolTip": "MVVM_Champ\\MVVM_Champ.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-04-27T10:04:08.678Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "IGoalRepository.cs",
+              "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\models\\IGoalRepository.cs",
+              "RelativeDocumentMoniker": "MVVM_Champ\\models\\IGoalRepository.cs",
+              "ToolTip": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\models\\IGoalRepository.cs",
+              "RelativeToolTip": "MVVM_Champ\\models\\IGoalRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-27T10:03:51.804Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Championship.cs",
+              "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\models\\Championship.cs",
+              "RelativeDocumentMoniker": "MVVM_Champ\\models\\Championship.cs",
+              "ToolTip": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\models\\Championship.cs",
+              "RelativeToolTip": "MVVM_Champ\\models\\Championship.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-27T10:03:47.896Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "ChampionshipRepository.cs",
+              "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\services\\ChampionshipRepository.cs",
+              "RelativeDocumentMoniker": "MVVM_Champ\\services\\ChampionshipRepository.cs",
+              "ToolTip": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\services\\ChampionshipRepository.cs",
+              "RelativeToolTip": "MVVM_Champ\\services\\ChampionshipRepository.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAASwFsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-27T10:03:25.531Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MVVM_Champ.csproj.nuget.g.props",
+              "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\obj\\MVVM_Champ.csproj.nuget.g.props",
+              "RelativeDocumentMoniker": "MVVM_Champ\\obj\\MVVM_Champ.csproj.nuget.g.props",
+              "ToolTip": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\obj\\MVVM_Champ.csproj.nuget.g.props",
+              "RelativeToolTip": "MVVM_Champ\\obj\\MVVM_Champ.csproj.nuget.g.props",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2026-04-27T10:03:20.934Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\App.xaml.cs",
+              "RelativeDocumentMoniker": "MVVM_Champ\\App.xaml.cs",
+              "ToolTip": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\App.xaml.cs",
+              "RelativeToolTip": "MVVM_Champ\\App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-27T10:02:56.159Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "ViewModelBase.cs",
+              "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\viewmodels\\ViewModelBase.cs",
+              "RelativeDocumentMoniker": "MVVM_Champ\\viewmodels\\ViewModelBase.cs",
+              "ToolTip": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\viewmodels\\ViewModelBase.cs",
+              "RelativeToolTip": "MVVM_Champ\\viewmodels\\ViewModelBase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-26T19:10:01.7Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "RelayCommand.cs",
+              "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\viewmodels\\RelayCommand.cs",
+              "RelativeDocumentMoniker": "MVVM_Champ\\viewmodels\\RelayCommand.cs",
+              "ToolTip": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\viewmodels\\RelayCommand.cs",
+              "RelativeToolTip": "MVVM_Champ\\viewmodels\\RelayCommand.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAcwCYAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-26T19:04:07.322Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "CountryViewModel.cs",
+              "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\viewmodels\\CountryViewModel.cs",
+              "RelativeDocumentMoniker": "MVVM_Champ\\viewmodels\\CountryViewModel.cs",
+              "ToolTip": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\viewmodels\\CountryViewModel.cs",
+              "RelativeToolTip": "MVVM_Champ\\viewmodels\\CountryViewModel.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAA7wFAAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-26T19:04:00.218Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "ICountryRepository.cs",
+              "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\models\\ICountryRepository.cs",
+              "RelativeDocumentMoniker": "MVVM_Champ\\models\\ICountryRepository.cs",
+              "ToolTip": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\models\\ICountryRepository.cs",
+              "RelativeToolTip": "MVVM_Champ\\models\\ICountryRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-26T19:03:55.731Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "Country.cs",
+              "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\models\\Country.cs",
+              "RelativeDocumentMoniker": "MVVM_Champ\\models\\Country.cs",
+              "ToolTip": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\models\\Country.cs",
+              "RelativeToolTip": "MVVM_Champ\\models\\Country.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-26T19:03:53.51Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "PostgresRep.cs",
+              "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\services\\PostgresRep.cs",
+              "RelativeDocumentMoniker": "MVVM_Champ\\services\\PostgresRep.cs",
+              "ToolTip": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\services\\PostgresRep.cs",
+              "RelativeToolTip": "MVVM_Champ\\services\\PostgresRep.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-26T19:03:41.924Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\view\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "MVVM_Champ\\view\\MainWindow.xaml",
+              "ToolTip": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\view\\MainWindow.xaml",
+              "RelativeToolTip": "MVVM_Champ\\view\\MainWindow.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-04-26T19:03:37.724Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ICountry.cs",
+              "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\WorldCupMVVM\\WorldCupMVVM\\Models\\ICountry.cs",
+              "RelativeDocumentMoniker": "..\\WorldCupMVVM\\WorldCupMVVM\\Models\\ICountry.cs",
+              "ToolTip": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\WorldCupMVVM\\WorldCupMVVM\\Models\\ICountry.cs",
+              "RelativeToolTip": "..\\WorldCupMVVM\\WorldCupMVVM\\Models\\ICountry.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-26T19:02:38.493Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Country.cs",
+              "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\WorldCupMVVM\\WorldCupMVVM\\Models\\Country.cs",
+              "RelativeDocumentMoniker": "..\\WorldCupMVVM\\WorldCupMVVM\\Models\\Country.cs",
+              "ToolTip": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\WorldCupMVVM\\WorldCupMVVM\\Models\\Country.cs",
+              "RelativeToolTip": "..\\WorldCupMVVM\\WorldCupMVVM\\Models\\Country.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-26T19:02:38.337Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "MVVM_Champ\\MainWindow.xaml",
+              "ToolTip": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\MainWindow.xaml",
+              "RelativeToolTip": "MVVM_Champ\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-04-26T19:02:19.586Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "MVVM_Champ\\MainWindow.xaml.cs",
+              "ToolTip": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\MainWindow.xaml.cs",
+              "RelativeToolTip": "MVVM_Champ\\MainWindow.xaml.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwBgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-26T19:02:16.116Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 1629,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

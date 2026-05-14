@@ -1,0 +1,372 @@
+СВЯЗИ МЕЖДУ СУЩНОСТЯМИ БАЗЫ ДАННЫХ
+
+═══════════════════════════════════════════════════════════════════════════════
+
+1. COUNTRY ↔ CHAMPIONSHIP (Один ко многим - 1:N)
+
+Описание:
+  Одна страна может организовать много чемпионатов.
+  Каждый чемпионат организуется ровно одной страной.
+
+Реализация:
+  - Таблица Championship содержит внешний ключ id_country
+  - Класс Championship имеет навигационное свойство Country
+  - Класс Country имеет навигационное свойство Championships (List<Championship>)
+
+SQL связь:
+  ALTER TABLE championship 
+  ADD CONSTRAINT fk_championship_country 
+  FOREIGN KEY (id_country) REFERENCES country(id_country);
+
+Пример данных:
+  Country: Россия (id=1)
+    ├─ Championship: 2022 - Москва (id=1, id_country=1)
+    └─ Championship: 2026 - Лос-Анджелес (id=2, id_country=1)
+
+═══════════════════════════════════════════════════════════════════════════════
+
+2. CHAMPIONSHIP ↔ MATCH (Один ко многим - 1:N)
+
+Описание:
+  Один чемпионат включает много матчей.
+  Каждый матч принадлежит ровно одному чемпионату.
+
+Реализация:
+  - Таблица Match содержит внешний ключ championship_id
+  - Класс Match имеет навигационное свойство Championship
+  - Класс Championship имеет навигационное свойство Matches (List<Match>)
+
+SQL связь:
+  ALTER TABLE "match" 
+  ADD CONSTRAINT fk_match_championship 
+  FOREIGN KEY (championship_id) REFERENCES championship(id_championship);
+
+Пример данных:
+  Championship: 2022 - Москва (id=1)
+    ├─ Match: Россия 2:1 Бразилия (id=1, championship_id=1)
+    ├─ Match: Германия 1:1 Франция (id=2, championship_id=1)
+    └─ Match: Испания 3:0 Англия (id=3, championship_id=1)
+
+═══════════════════════════════════════════════════════════════════════════════
+
+3. COUNTRY ↔ MATCH (Один ко многим - 1:N) - TEAM 1
+
+Описание:
+  Одна страна может быть первой командой в много матчах.
+  Каждый матч имеет ровно одну первую команду.
+
+Реализация:
+  - Таблица Match содержит внешний ключ team1_id
+  - Класс Match имеет навигационное свойство Team1 (Country)
+  - Класс Country имеет навигационное свойство Matches (List<Match>)
+
+SQL связь:
+  ALTER TABLE "match" 
+  ADD CONSTRAINT fk_match_team1 
+  FOREIGN KEY (team1_id) REFERENCES country(id_country);
+
+Пример данных:
+  Country: Россия (id=1)
+    ├─ Match: Россия 2:1 Бразилия (team1_id=1)
+    ├─ Match: Россия 3:0 Англия (team1_id=1)
+    └─ Match: Россия 1:2 Франция (team1_id=1)
+
+═══════════════════════════════════════════════════════════════════════════════
+
+4. COUNTRY ↔ MATCH (Один ко многим - 1:N) - TEAM 2
+
+Описание:
+  Одна страна может быть второй командой в много матчах.
+  Каждый матч имеет ровно одну вторую команду.
+
+Реализация:
+  - Таблица Match содержит внешний ключ team2_id
+  - Класс Match имеет навигационное свойство Team2 (Country)
+  - Класс Country имеет навигационное свойство Matches (List<Match>)
+
+SQL связь:
+  ALTER TABLE "match" 
+  ADD CONSTRAINT fk_match_team2 
+  FOREIGN KEY (team2_id) REFERENCES country(id_country);
+
+Пример данных:
+  Country: Бразилия (id=2)
+    ├─ Match: Россия 2:1 Бразилия (team2_id=2)
+    ├─ Match: Германия 0:3 Бразилия (team2_id=2)
+    └─ Match: Бразилия 2:2 Франция (team2_id=2)
+
+═══════════════════════════════════════════════════════════════════════════════
+
+5. MATCH ↔ GOAL (Один ко многим - 1:N)
+
+Описание:
+  Один матч может содержать много голов.
+  Каждый гол забивается в ровно одном матче.
+
+Реализация:
+  - Таблица Goal содержит внешний ключ match_id
+  - Класс Goal имеет навигационное свойство Match
+  - Класс Match имеет навигационное свойство Goals (List<Goal>)
+
+SQL связь:
+  ALTER TABLE goal 
+  ADD CONSTRAINT fk_goal_match 
+  FOREIGN KEY (match_id) REFERENCES "match"(id_match);
+
+Пример данных:
+  Match: Россия 2:1 Бразилия (id=1)
+    ├─ Goal: Иван Петров, 15' (match_id=1)
+    ├─ Goal: Сергей Сидоров, 45' (match_id=1)
+    └─ Goal: Карлос Сантос, 60' (match_id=1)
+
+═══════════════════════════════════════════════════════════════════════════════
+
+6. PERSON ↔ GOAL (Один ко многим - 1:N)
+
+Описание:
+  Один игрок может забить много голов.
+  Каждый гол забивается ровно одним игроком.
+
+Реализация:
+  - Таблица Goal содержит внешний ключ player_id
+  - Класс Goal имеет навигационное свойство Player (Person)
+  - Класс Person имеет навигационное свойство Goals (List<Goal>)
+
+SQL связь:
+  ALTER TABLE goal 
+  ADD CONSTRAINT fk_goal_player 
+  FOREIGN KEY (player_id) REFERENCES person(id_person);
+
+Пример данных:
+  Person: Иван Петров (id=1, status='player')
+    ├─ Goal: 15' в матче Россия 2:1 Бразилия (player_id=1)
+    ├─ Goal: 35' в матче Россия 3:0 Англия (player_id=1)
+    └─ Goal: 70' в матче Россия 1:2 Франция (player_id=1)
+
+═══════════════════════════════════════════════════════════════════════════════
+
+7. GOALTYPE ↔ GOAL (Один ко многим - 1:N)
+
+Описание:
+  Один тип гола может быть использован в много голах.
+  Каждый гол имеет ровно один тип.
+
+Реализация:
+  - Таблица Goal содержит внешний ключ goal_type_id
+  - Класс Goal имеет навигационное свойство GoalType
+  - Класс GoalType имеет навигационное свойство Goals (List<Goal>)
+
+SQL связь:
+  ALTER TABLE goal 
+  ADD CONSTRAINT fk_goal_goaltype 
+  FOREIGN KEY (goal_type_id) REFERENCES goal_type(id_goal_type);
+
+Пример данных:
+  GoalType: С игры (id=1)
+    ├─ Goal: Иван Петров, 15' (goal_type_id=1)
+    ├─ Goal: Сергей Сидоров, 35' (goal_type_id=1)
+    └─ Goal: Карлос Сантос, 60' (goal_type_id=1)
+
+  GoalType: Пенальти (id=2)
+    └─ Goal: Марко Верратти, 45' (goal_type_id=2)
+
+═══════════════════════════════════════════════════════════════════════════════
+
+8. MATCH ↔ PLAYERSQUAD (Один ко многим - 1:N)
+
+Описание:
+  Один матч может включать много игроков в составе.
+  Каждая запись о составе относится к ровно одному матчу.
+
+Реализация:
+  - Таблица PlayerSquad содержит внешний ключ match_id
+  - Класс PlayerSquad имеет навигационное свойство Match
+  - Класс Match имеет навигационное свойство Players (List<PlayerSquad>)
+
+SQL связь:
+  ALTER TABLE player_squad 
+  ADD CONSTRAINT fk_playersquad_match 
+  FOREIGN KEY (match_id) REFERENCES "match"(id_match);
+
+Пример данных:
+  Match: Россия 2:1 Бразилия (id=1)
+    ├─ PlayerSquad: #10 Иван Петров (match_id=1)
+    ├─ PlayerSquad: #7 Сергей Сидоров (match_id=1)
+    └─ PlayerSquad: #9 Алексей Иванов (match_id=1)
+
+═══════════════════════════════════════════════════════════════════════════════
+
+9. PERSON ↔ PLAYERSQUAD (Один ко многим - 1:N)
+
+Описание:
+  Один игрок может участвовать в много матчах.
+  Каждая запись о составе относится к ровно одному игроку.
+
+Реализация:
+  - Таблица PlayerSquad содержит внешний ключ player_id
+  - Класс PlayerSquad имеет навигационное свойство Player (Person)
+  - Класс Person имеет навигационное свойство PlayerSquads (List<PlayerSquad>)
+
+SQL связь:
+  ALTER TABLE player_squad 
+  ADD CONSTRAINT fk_playersquad_player 
+  FOREIGN KEY (player_id) REFERENCES person(id_person);
+
+Пример данных:
+  Person: Иван Петров (id=1)
+    ├─ PlayerSquad: #10 в матче Россия 2:1 Бразилия (player_id=1)
+    ├─ PlayerSquad: #10 в матче Россия 3:0 Англия (player_id=1)
+    └─ PlayerSquad: #10 в матче Россия 1:2 Франция (player_id=1)
+
+═══════════════════════════════════════════════════════════════════════════════
+
+10. COUNTRY ↔ PLAYERSQUAD (Один ко многим - 1:N)
+
+Описание:
+  Одна страна может иметь много игроков в разных матчах.
+  Каждая запись о составе относится к ровно одной команде.
+
+Реализация:
+  - Таблица PlayerSquad содержит внешний ключ team_id
+  - Класс PlayerSquad имеет навигационное свойство Team (Country)
+  - Класс Country имеет навигационное свойство PlayerSquads (List<PlayerSquad>)
+
+SQL связь:
+  ALTER TABLE player_squad 
+  ADD CONSTRAINT fk_playersquad_team 
+  FOREIGN KEY (team_id) REFERENCES country(id_country);
+
+Пример данных:
+  Country: Россия (id=1)
+    ├─ PlayerSquad: #10 Иван Петров в матче Россия 2:1 Бразилия (team_id=1)
+    ├─ PlayerSquad: #7 Сергей Сидоров в матче Россия 2:1 Бразилия (team_id=1)
+    └─ PlayerSquad: #9 Алексей Иванов в матче Россия 2:1 Бразилия (team_id=1)
+
+═══════════════════════════════════════════════════════════════════════════════
+
+11. MATCH ↔ COACHMATCH (Один ко многим - 1:N)
+
+Описание:
+  Один матч может иметь много тренеров (по одному на каждую команду).
+  Каждая запись о тренере относится к ровно одному матчу.
+
+Реализация:
+  - Таблица CoachMatch содержит внешний ключ match_id
+  - Класс CoachMatch имеет навигационное свойство Match
+  - Класс Match имеет навигационное свойство Coaches (List<CoachMatch>)
+
+SQL связь:
+  ALTER TABLE coach_match 
+  ADD CONSTRAINT fk_coachmatch_match 
+  FOREIGN KEY (match_id) REFERENCES "match"(id_match);
+
+Пример данных:
+  Match: Россия 2:1 Бразилия (id=1)
+    ├─ CoachMatch: Станислав Черчесов (match_id=1, team_id=1)
+    └─ CoachMatch: Луис Фелипе Сколари (match_id=1, team_id=2)
+
+═══════════════════════════════════════════════════════════════════════════════
+
+12. PERSON ↔ COACHMATCH (Один ко многим - 1:N)
+
+Описание:
+  Один тренер может руководить много матчей.
+  Каждая запись о тренере относится к ровно одному тренеру.
+
+Реализация:
+  - Таблица CoachMatch содержит внешний ключ coach_id
+  - Класс CoachMatch имеет навигационное свойство Coach (Person)
+  - Класс Person имеет навигационное свойство CoachMatches (List<CoachMatch>)
+
+SQL связь:
+  ALTER TABLE coach_match 
+  ADD CONSTRAINT fk_coachmatch_coach 
+  FOREIGN KEY (coach_id) REFERENCES person(id_person);
+
+Пример данных:
+  Person: Станислав Черчесов (id=4, status='coach')
+    ├─ CoachMatch: в матче Россия 2:1 Бразилия (coach_id=4)
+    ├─ CoachMatch: в матче Россия 3:0 Англия (coach_id=4)
+    └─ CoachMatch: в матче Россия 1:2 Франция (coach_id=4)
+
+═══════════════════════════════════════════════════════════════════════════════
+
+13. COUNTRY ↔ COACHMATCH (Один ко многим - 1:N)
+
+Описание:
+  Одна страна может иметь много тренеров в разных матчах.
+  Каждая запись о тренере относится к ровно одной команде.
+
+Реализация:
+  - Таблица CoachMatch содержит внешний ключ team_id
+  - Класс CoachMatch имеет навигационное свойство Team (Country)
+  - Класс Country имеет навигационное свойство CoachMatches (List<CoachMatch>)
+
+SQL связь:
+  ALTER TABLE coach_match 
+  ADD CONSTRAINT fk_coachmatch_team 
+  FOREIGN KEY (team_id) REFERENCES country(id_country);
+
+Пример данных:
+  Country: Россия (id=1)
+    ├─ CoachMatch: Станислав Черчесов в матче Россия 2:1 Бразилия (team_id=1)
+    ├─ CoachMatch: Станислав Черчесов в матче Россия 3:0 Англия (team_id=1)
+    └─ CoachMatch: Станислав Черчесов в матче Россия 1:2 Франция (team_id=1)
+
+═══════════════════════════════════════════════════════════════════════════════
+
+ДИАГРАММА СВЯЗЕЙ
+
+                        ┌─────────────┐
+                        │   Country   │
+                        └─────────────┘
+                         △    △    △
+                         │    │    │
+                    1:N  │    │    │  1:N
+                         │    │    │
+        ┌────────────────┼────┼────┼────────────────┐
+        │                │    │    │                │
+        ▼                ▼    ▼    ▼                ▼
+   ┌──────────┐    ┌──────────┐  ┌──────────┐  ┌──────────┐
+   │Championship
+   │          │    │  Match   │  │PlayerSquad
+   │          │    │          │  │          │
+   └──────────┘    └──────────┘  └──────────┘
+        │               △ △           │
+        │ 1:N           │ │ 1:N       │ 1:N
+        │               │ │           │
+        └───────────────┼─┼───────────┘
+                        │ │
+                        ▼ ▼
+                    ┌──────────┐
+                    │   Goal   │
+                    └──────────┘
+                        △
+                        │ 1:N
+                        │
+                    ┌───┴────┐
+                    │        │
+                    ▼        ▼
+                ┌────────┐ ┌──────────┐
+                │ Person │ │ GoalType │
+                └────────┘ └──────────┘
+                    △
+                    │ 1:N
+                    │
+                ┌───┴────────┐
+                │            │
+                ▼            ▼
+            ┌──────────┐  ┌──────────┐
+            │PlayerSquad
+            │          │  │CoachMatch│
+            └──────────┘  └──────────┘
+
+═══════════════════════════════════════════════════════════════════════════════
+
+ИТОГО: 13 связей типа "Один ко многим" (1:N)
+
+Все связи обеспечивают:
+✓ Целостность данных (Foreign Keys)
+✓ Навигацию между сущностями (Navigation Properties)
+✓ Возможность выполнения сложных запросов (JOIN операции)
+✓ Правильную нормализацию БД (3NF)

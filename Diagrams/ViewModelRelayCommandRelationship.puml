@@ -1,0 +1,75 @@
+@startuml ViewModelRelayCommandRelationship
+!theme plain
+skinparam backgroundColor #FEFEFE
+skinparam classBackgroundColor #F0E8F8
+skinparam classBorderColor #6600CC
+skinparam arrowColor #6600CC
+
+package "VIEWMODEL LAYER" {
+    class BaseViewModel {
+        # PropertyChanged: event
+        # OnPropertyChanged(string): void
+    }
+    
+    class RelayCommand {
+        - execute: Action<object>
+        - canExecute: Predicate<object>
+        --
+        + Execute(object): void
+        + CanExecute(object): bool
+        + CanExecuteChanged: event
+    }
+    
+    class CountryViewModel {
+        + Countries: ObservableCollection<Country>
+        + SelectedCountry: Country
+        + CountryName: string
+        + SearchText: string
+        --
+        + LoadCommand: RelayCommand
+        + SaveCommand: RelayCommand
+        + DeleteCommand: RelayCommand
+        + ClearCommand: RelayCommand
+    }
+    
+    class MatchViewModel {
+        + Matches: ObservableCollection<Match>
+        + Championships: ObservableCollection<Championship>
+        + Countries: ObservableCollection<Country>
+        + SelectedMatch: Match
+        --
+        + LoadCommand: RelayCommand
+        + SaveCommand: RelayCommand
+        + DeleteCommand: RelayCommand
+        + ClearCommand: RelayCommand
+    }
+    
+    class StatisticsViewModel {
+        + TopScorers: ObservableCollection<TopScorerStatistic>
+        + GoalsByType: ObservableCollection<GoalTypeStatistic>
+        + MatchesByChampionship: ObservableCollection<ChampionshipMatchStatistic>
+        + TeamStatistics: ObservableCollection<TeamStatistic>
+        --
+        + LoadStatisticsCommand: RelayCommand
+        + RefreshCommand: RelayCommand
+    }
+}
+
+BaseViewModel <|-- CountryViewModel
+BaseViewModel <|-- MatchViewModel
+BaseViewModel <|-- StatisticsViewModel
+
+CountryViewModel --> RelayCommand : LoadCommand
+CountryViewModel --> RelayCommand : SaveCommand
+CountryViewModel --> RelayCommand : DeleteCommand
+CountryViewModel --> RelayCommand : ClearCommand
+
+MatchViewModel --> RelayCommand : LoadCommand
+MatchViewModel --> RelayCommand : SaveCommand
+MatchViewModel --> RelayCommand : DeleteCommand
+MatchViewModel --> RelayCommand : ClearCommand
+
+StatisticsViewModel --> RelayCommand : LoadStatisticsCommand
+StatisticsViewModel --> RelayCommand : RefreshCommand
+
+@enduml

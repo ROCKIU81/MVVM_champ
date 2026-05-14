@@ -1,0 +1,122 @@
+@startuml WorldCupDatabase
+!theme plain
+skinparam backgroundColor #FEFEFE
+skinparam classBackgroundColor #F0F0F0
+skinparam classBorderColor #333333
+skinparam arrowColor #333333
+
+' Country Entity
+class Country {
+  - id_country: int <<PK>>
+  - name: string
+  --
+  + GetChampionships(): List
+  + GetMatches(): List
+}
+
+' Championship Entity
+class Championship {
+  - id_championship: int <<PK>>
+  - year_played: int
+  - host_city: string
+  - id_country: int <<FK>>
+  --
+  + GetMatches(): List
+  + GetTotalGoals(): int
+  + ChampionshipDisplay: string
+}
+
+' Match Entity
+class Match {
+  - id_match: int <<PK>>
+  - championship_id: int <<FK>>
+  - team1_id: int <<FK>>
+  - team2_id: int <<FK>>
+  - team1_score: int
+  - team2_score: int
+  --
+  + GetGoals(): List
+  + GetPlayers(): List
+  + GetCoaches(): List
+  + MatchDisplay: string
+  + ScoreDisplay: string
+}
+
+' Person Entity
+class Person {
+  - id_person: int <<PK>>
+  - full_name: string
+  - date_of_birth: DateTime
+  - status: string
+  --
+  + GetGoals(): List
+  + GetMatches(): List
+}
+
+' GoalType Entity
+class GoalType {
+  - id_goal_type: int <<PK>>
+  - type_name: string
+  - description: string
+  --
+  + GetGoals(): List
+}
+
+' Goal Entity
+class Goal {
+  - id_goal: int <<PK>>
+  - match_id: int <<FK>>
+  - player_id: int <<FK>>
+  - minute: int
+  - goal_type_id: int <<FK>>
+  --
+  + GetPlayerName(): string
+  + GetGoalTypeName(): string
+  + GetMatchName(): string
+  + GoalDisplay: string
+  + MinuteDisplay: string
+}
+
+' PlayerSquad Entity
+class PlayerSquad {
+  - id_record: int <<PK>>
+  - match_id: int <<FK>>
+  - player_id: int <<FK>>
+  - team_id: int <<FK>>
+  - player_number: int
+  --
+  + GetSquadDisplay(): string
+  + PlayerName: string
+  + TeamName: string
+  + MatchName: string
+}
+
+' CoachMatch Entity
+class CoachMatch {
+  - id_record: int <<PK>>
+  - match_id: int <<FK>>
+  - coach_id: int <<FK>>
+  - team_id: int <<FK>>
+  --
+  + GetCoachDisplay(): string
+  + CoachName: string
+  + TeamName: string
+  + MatchName: string
+}
+
+' Relationships
+Country "1" -- "*" Championship : organizes
+Championship "1" -- "*" Match : contains
+Country "1" -- "*" Match : team1
+Country "1" -- "*" Match : team2
+Match "1" -- "*" Goal : has
+Person "1" -- "*" Goal : scores
+GoalType "1" -- "*" Goal : type
+Match "1" -- "*" PlayerSquad : includes
+Person "1" -- "*" PlayerSquad : plays
+Country "1" -- "*" PlayerSquad : team
+Match "1" -- "*" CoachMatch : manages
+Person "1" -- "*" CoachMatch : coaches
+Country "1" -- "*" CoachMatch : team
+
+@enduml
