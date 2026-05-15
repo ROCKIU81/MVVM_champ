@@ -1,6 +1,5 @@
 using System.Windows;
 using WorldCupMVVM.Services;
-using MVVM_Champ;
 
 namespace WorldCupMVVM.Views
 {
@@ -11,12 +10,12 @@ namespace WorldCupMVVM.Views
             InitializeComponent();
         }
 
-        private void TestDataButton_Click(object sender, RoutedEventArgs e)
+        private async void TestDataButton_Click(object sender, RoutedEventArgs e)
         {
             var testDataService = new TestDataService();
-            testDataService.FillTestDataAsync().Wait();
+            await testDataService.FillTestDataAsync();
             
-            MainWindow mainWindow = new MainWindow();
+            var mainWindow = new MainWindow();
             mainWindow.Show();
             
             this.Close();
@@ -24,7 +23,7 @@ namespace WorldCupMVVM.Views
 
         private void DatabaseButton_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow mainWindow = new MainWindow();
+            var mainWindow = new MainWindow();
             mainWindow.Show();
             
             this.Close();
