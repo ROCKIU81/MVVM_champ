@@ -16,7 +16,7 @@ namespace WorldCupMVVM.Views
             var testDataService = new TestDataService();
             await testDataService.FillTestDataAsync();
             
-            var mainWindow = new WorldCupMVVM.MainWindow();
+            var mainWindow = new MVVM_Champ.MainWindow();
             mainWindow.Show();
             
             this.Close();
@@ -24,7 +24,7 @@ namespace WorldCupMVVM.Views
 
         private void DatabaseButton_Click(object sender, RoutedEventArgs e)
         {
-            var mainWindow = new WorldCupMVVM.MainWindow();
+            var mainWindow = new MVVM_Champ.MainWindow();
             mainWindow.Show();
             
             this.Close();
