@@ -1,7 +1,7 @@
 using System;
 using System.Diagnostics;
 using System.Windows;
-using MVVM_Champ;
+using WorldCupMVVM.Views;
 
 namespace MVVM_Champ
 {
@@ -19,7 +19,7 @@ namespace MVVM_Champ
             {
                 base.OnStartup(e);
                 
-                var startupWindow = new view.StartupWindow();
+                var startupWindow = new StartupWindow();
                 startupWindow.Show();
             }
             catch (Exception ex)
