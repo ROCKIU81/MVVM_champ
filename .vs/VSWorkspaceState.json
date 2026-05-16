@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\MVVM_Champ"
+    "\\MVVM_Champ",
+    "\\MVVM_Champ.Tests"
   ],
-  "SelectedNode": "\\MVVM_Champ.sln",
+  "SelectedNode": "\\MVVM_Champ.Tests\\ChampionshipModelTests.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -1,6 +1,6 @@
 using Xunit;
 using System.Collections.Generic;
-using MVVM_Champ.Models;
+using WorldCupMVVM.Models;
 
 namespace MVVM_Champ.Tests
 {
