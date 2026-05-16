@@ -9,6 +9,10 @@ E:\Проекты_C#\MVVM\MVVM_Champ\MVVM_Champ\bin\Debug\net9.0-windows\Microso
 E:\Проекты_C#\MVVM\MVVM_Champ\MVVM_Champ\bin\Debug\net9.0-windows\Microsoft.Extensions.Logging.Abstractions.dll
 E:\Проекты_C#\MVVM\MVVM_Champ\MVVM_Champ\bin\Debug\net9.0-windows\Npgsql.dll
 E:\Проекты_C#\MVVM\MVVM_Champ\MVVM_Champ\obj\Debug\net9.0-windows\MVVM_Champ.csproj.AssemblyReference.cache
+E:\Проекты_C#\MVVM\MVVM_Champ\MVVM_Champ\obj\Debug\net9.0-windows\view\MainWindow.baml
+E:\Проекты_C#\MVVM\MVVM_Champ\MVVM_Champ\obj\Debug\net9.0-windows\view\StartupWindow.baml
+E:\Проекты_C#\MVVM\MVVM_Champ\MVVM_Champ\obj\Debug\net9.0-windows\view\MainWindow.g.cs
+E:\Проекты_C#\MVVM\MVVM_Champ\MVVM_Champ\obj\Debug\net9.0-windows\view\StartupWindow.g.cs
 E:\Проекты_C#\MVVM\MVVM_Champ\MVVM_Champ\obj\Debug\net9.0-windows\App.g.cs
 E:\Проекты_C#\MVVM\MVVM_Champ\MVVM_Champ\obj\Debug\net9.0-windows\MVVM_Champ_MarkupCompile.cache
 E:\Проекты_C#\MVVM\MVVM_Champ\MVVM_Champ\obj\Debug\net9.0-windows\MVVM_Champ.g.resources
@@ -16,14 +20,10 @@ E:\Проекты_C#\MVVM\MVVM_Champ\MVVM_Champ\obj\Debug\net9.0-windows\MVVM_Ch
 E:\Проекты_C#\MVVM\MVVM_Champ\MVVM_Champ\obj\Debug\net9.0-windows\MVVM_Champ.AssemblyInfoInputs.cache
 E:\Проекты_C#\MVVM\MVVM_Champ\MVVM_Champ\obj\Debug\net9.0-windows\MVVM_Champ.AssemblyInfo.cs
 E:\Проекты_C#\MVVM\MVVM_Champ\MVVM_Champ\obj\Debug\net9.0-windows\MVVM_Champ.csproj.CoreCompileInputs.cache
+E:\Проекты_C#\MVVM\MVVM_Champ\MVVM_Champ\obj\Debug\net9.0-windows\MVVM_Champ.sourcelink.json
 E:\Проекты_C#\MVVM\MVVM_Champ\MVVM_Champ\obj\Debug\net9.0-windows\MVVM_Champ.csproj.Up2Date
 E:\Проекты_C#\MVVM\MVVM_Champ\MVVM_Champ\obj\Debug\net9.0-windows\MVVM_Champ.dll
 E:\Проекты_C#\MVVM\MVVM_Champ\MVVM_Champ\obj\Debug\net9.0-windows\refint\MVVM_Champ.dll
 E:\Проекты_C#\MVVM\MVVM_Champ\MVVM_Champ\obj\Debug\net9.0-windows\MVVM_Champ.pdb
 E:\Проекты_C#\MVVM\MVVM_Champ\MVVM_Champ\obj\Debug\net9.0-windows\MVVM_Champ.genruntimeconfig.cache
 E:\Проекты_C#\MVVM\MVVM_Champ\MVVM_Champ\obj\Debug\net9.0-windows\ref\MVVM_Champ.dll
-E:\Проекты_C#\MVVM\MVVM_Champ\MVVM_Champ\obj\Debug\net9.0-windows\view\MainWindow.baml
-E:\Проекты_C#\MVVM\MVVM_Champ\MVVM_Champ\obj\Debug\net9.0-windows\view\MainWindow.g.cs
-E:\Проекты_C#\MVVM\MVVM_Champ\MVVM_Champ\obj\Debug\net9.0-windows\view\StartupWindow.baml
-E:\Проекты_C#\MVVM\MVVM_Champ\MVVM_Champ\obj\Debug\net9.0-windows\view\StartupWindow.g.cs
-E:\Проекты_C#\MVVM\MVVM_Champ\MVVM_Champ\obj\Debug\net9.0-windows\MVVM_Champ.sourcelink.json

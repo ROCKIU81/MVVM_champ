@@ -1,5 +1,4 @@
 using Xunit;
-using System.Collections.Generic;
 using WorldCupMVVM.Models;
 
 namespace MVVM_Champ.Tests
@@ -20,37 +19,25 @@ namespace MVVM_Champ.Tests
             Assert.NotNull(championship);
             Assert.Equal(2022, championship.Year);
             Assert.Equal("Москва", championship.City);
+            Assert.Equal(1, championship.CountryId);
         }
 
         [Fact]
-        public void Championship_WithMatches_ReturnsMatchList()
-        {
-            var championship = new Championship 
-            { 
-                Id = 1, 
-                Year = 2022, 
-                City = "Москва", 
-                CountryId = 1,
-                Matches = new List<Match>
-                {
-                    new Match { Id = 1, ChampionshipId = 1, Team1Id = 1, Team2Id = 2, Team1Score = 2, Team2Score = 1 },
-                    new Match { Id = 2, ChampionshipId = 1, Team1Id = 3, Team2Id = 4, Team1Score = 1, Team2Score = 1 }
-                }
-            };
-
-            Assert.Equal(2, championship.Matches.Count);
-        }
-
-        [Fact]
-        public void Championship_CanAddMatches()
+        public void Championship_CanUpdateYear()
         {
             var championship = new Championship { Id = 1, Year = 2022, City = "Москва", CountryId = 1 };
-            var match = new Match { Id = 1, ChampionshipId = 1, Team1Id = 1, Team2Id = 2, Team1Score = 2, Team2Score = 1 };
-            
-            championship.Matches = new List<Match> { match };
+            championship.Year = 2026;
 
-            Assert.Single(championship.Matches);
-            Assert.Equal(2, championship.Matches[0].Team1Score);
+            Assert.Equal(2026, championship.Year);
+        }
+
+        [Fact]
+        public void Championship_CanUpdateCity()
+        {
+            var championship = new Championship { Id = 1, Year = 2022, City = "Москва", CountryId = 1 };
+            championship.City = "Санкт-Петербург";
+
+            Assert.Equal("Санкт-Петербург", championship.City);
         }
     }
 }

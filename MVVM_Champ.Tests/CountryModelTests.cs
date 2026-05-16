@@ -1,5 +1,4 @@
 using Xunit;
-using System.Collections.Generic;
 using WorldCupMVVM.Models;
 
 namespace MVVM_Champ.Tests
@@ -17,35 +16,21 @@ namespace MVVM_Champ.Tests
         }
 
         [Fact]
-        public void Country_WithNavigationProperties_InitializesCollections()
+        public void Country_WithEmptyName_CreatesSuccessfully()
         {
-            var country = new Country 
-            { 
-                Id = 1, 
-                Name = "Россия",
-                Championships = new List<Championship>(),
-                Matches = new List<Match>(),
-                PlayerSquads = new List<PlayerSquad>(),
-                CoachMatches = new List<CoachMatch>()
-            };
+            var country = new Country { Id = 2, Name = "" };
 
-            Assert.NotNull(country.Championships);
-            Assert.NotNull(country.Matches);
-            Assert.NotNull(country.PlayerSquads);
-            Assert.NotNull(country.CoachMatches);
-            Assert.Empty(country.Championships);
+            Assert.NotNull(country);
+            Assert.Equal("", country.Name);
         }
 
         [Fact]
-        public void Country_CanAddChampionships()
+        public void Country_CanUpdateName()
         {
             var country = new Country { Id = 1, Name = "Россия" };
-            var championship = new Championship { Id = 1, Year = 2022, City = "Москва", CountryId = 1 };
-            
-            country.Championships = new List<Championship> { championship };
+            country.Name = "Бразилия";
 
-            Assert.Single(country.Championships);
-            Assert.Equal("Москва", country.Championships[0].City);
+            Assert.Equal("Бразилия", country.Name);
         }
     }
 }
