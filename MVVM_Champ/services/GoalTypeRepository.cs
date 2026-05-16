@@ -17,6 +17,11 @@ namespace WorldCupMVVM.Services
 
         public async Task<IEnumerable<GoalType>> GetAllAsync()
         {
+            if (AppSettings.UseTestData)
+            {
+                return await Task.FromResult(TestDataService.GoalTypes);
+            }
+
             var result = new List<GoalType>();
 
             using (var connection = new NpgsqlConnection(_connectionString))

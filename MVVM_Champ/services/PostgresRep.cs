@@ -17,6 +17,11 @@ namespace WorldCupMVVM.Services
 
         public async Task<IEnumerable<Country>> GetAllAsync()
         {
+            if (AppSettings.UseTestData)
+            {
+                return await Task.FromResult(TestDataService.Countries);
+            }
+
             var result = new List<Country>();
 
             using (var connection = new NpgsqlConnection(_connectionString))

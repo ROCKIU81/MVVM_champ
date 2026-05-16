@@ -17,6 +17,11 @@ namespace WorldCupMVVM.Services
 
         public async Task<IEnumerable<CoachMatch>> GetAllAsync()
         {
+            if (AppSettings.UseTestData)
+            {
+                return await Task.FromResult(TestDataService.CoachMatches);
+            }
+
             var result = new List<CoachMatch>();
 
             using (var connection = new NpgsqlConnection(_connectionString))

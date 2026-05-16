@@ -17,6 +17,11 @@ namespace WorldCupMVVM.Services
 
         public async Task<IEnumerable<Match>> GetAllAsync()
         {
+            if (AppSettings.UseTestData)
+            {
+                return await Task.FromResult(TestDataService.Matches);
+            }
+
             var result = new List<Match>();
 
             using (var connection = new NpgsqlConnection(_connectionString))
@@ -42,9 +47,9 @@ namespace WorldCupMVVM.Services
                             Team2Id = reader.GetInt32(3),
                             Team1Score = reader.GetInt32(4),
                             Team2Score = reader.GetInt32(5),
-                            Championship = new Championship { Id = reader.GetInt32(1), Year = reader.GetInt32(8), City = reader.GetString(9) },
                             Team1 = new Country { Id = reader.GetInt32(2), Name = reader.GetString(6) },
-                            Team2 = new Country { Id = reader.GetInt32(3), Name = reader.GetString(7) }
+                            Team2 = new Country { Id = reader.GetInt32(3), Name = reader.GetString(7) },
+                            Championship = new Championship { Id = reader.GetInt32(1), Year = reader.GetInt32(8), City = reader.GetString(9) }
                         });
                     }
                 }

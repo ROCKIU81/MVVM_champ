@@ -26,3 +26,4 @@ E:\Проекты_C#\MVVM\MVVM_Champ\MVVM_Champ\obj\Debug\net9.0-windows\view\Ma
 E:\Проекты_C#\MVVM\MVVM_Champ\MVVM_Champ\obj\Debug\net9.0-windows\view\MainWindow.g.cs
 E:\Проекты_C#\MVVM\MVVM_Champ\MVVM_Champ\obj\Debug\net9.0-windows\view\StartupWindow.baml
 E:\Проекты_C#\MVVM\MVVM_Champ\MVVM_Champ\obj\Debug\net9.0-windows\view\StartupWindow.g.cs
+E:\Проекты_C#\MVVM\MVVM_Champ\MVVM_Champ\obj\Debug\net9.0-windows\MVVM_Champ.sourcelink.json

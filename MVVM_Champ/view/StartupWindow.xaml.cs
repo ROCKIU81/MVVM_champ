@@ -13,6 +13,8 @@ namespace WorldCupMVVM.Views
 
         private async void TestDataButton_Click(object sender, RoutedEventArgs e)
         {
+            AppSettings.UseTestData = true;
+            
             var testDataService = new TestDataService();
             await testDataService.FillTestDataAsync();
             
@@ -24,6 +26,8 @@ namespace WorldCupMVVM.Views
 
         private void DatabaseButton_Click(object sender, RoutedEventArgs e)
         {
+            AppSettings.UseTestData = false;
+            
             var mainWindow = new MVVM_Champ.MainWindow();
             mainWindow.Show();
             
