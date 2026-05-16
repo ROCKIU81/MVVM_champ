@@ -3,8 +3,36 @@
   "WorkspaceRootPath": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{77308645-822F-457E-8AE1-D8CCD3C1A33B}|MVVM_Champ\\MVVM_Champ.csproj|e:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B_c#\\mvvm\\mvvm_champ\\mvvm_champ\\viewmodels\\goaltypeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77308645-822F-457E-8AE1-D8CCD3C1A33B}|MVVM_Champ\\MVVM_Champ.csproj|solutionrelative:mvvm_champ\\viewmodels\\goaltypeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77308645-822F-457E-8AE1-D8CCD3C1A33B}|MVVM_Champ\\MVVM_Champ.csproj|e:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B_c#\\mvvm\\mvvm_champ\\mvvm_champ\\servicecontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77308645-822F-457E-8AE1-D8CCD3C1A33B}|MVVM_Champ\\MVVM_Champ.csproj|solutionrelative:mvvm_champ\\servicecontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77308645-822F-457E-8AE1-D8CCD3C1A33B}|MVVM_Champ\\MVVM_Champ.csproj|e:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B_c#\\mvvm\\mvvm_champ\\mvvm_champ\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77308645-822F-457E-8AE1-D8CCD3C1A33B}|MVVM_Champ\\MVVM_Champ.csproj|solutionrelative:mvvm_champ\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{77308645-822F-457E-8AE1-D8CCD3C1A33B}|MVVM_Champ\\MVVM_Champ.csproj|e:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B_c#\\mvvm\\mvvm_champ\\mvvm_champ\\view\\startupwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{77308645-822F-457E-8AE1-D8CCD3C1A33B}|MVVM_Champ\\MVVM_Champ.csproj|solutionrelative:mvvm_champ\\view\\startupwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77308645-822F-457E-8AE1-D8CCD3C1A33B}|MVVM_Champ\\MVVM_Champ.csproj|e:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B_c#\\mvvm\\mvvm_champ\\mvvm_champ\\view\\startupwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{77308645-822F-457E-8AE1-D8CCD3C1A33B}|MVVM_Champ\\MVVM_Champ.csproj|solutionrelative:mvvm_champ\\view\\startupwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77308645-822F-457E-8AE1-D8CCD3C1A33B}|MVVM_Champ\\MVVM_Champ.csproj|e:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B_c#\\mvvm\\mvvm_champ\\mvvm_champ\\view\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{77308645-822F-457E-8AE1-D8CCD3C1A33B}|MVVM_Champ\\MVVM_Champ.csproj|solutionrelative:mvvm_champ\\view\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77308645-822F-457E-8AE1-D8CCD3C1A33B}|MVVM_Champ\\MVVM_Champ.csproj|e:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B_c#\\mvvm\\mvvm_champ\\mvvm_champ\\viewmodels\\viewmodelbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77308645-822F-457E-8AE1-D8CCD3C1A33B}|MVVM_Champ\\MVVM_Champ.csproj|solutionrelative:mvvm_champ\\viewmodels\\viewmodelbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{77308645-822F-457E-8AE1-D8CCD3C1A33B}|MVVM_Champ\\MVVM_Champ.csproj|e:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B_c#\\mvvm\\mvvm_champ\\mvvm_champ\\viewmodels\\statisticsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{77308645-822F-457E-8AE1-D8CCD3C1A33B}|MVVM_Champ\\MVVM_Champ.csproj|solutionrelative:mvvm_champ\\viewmodels\\statisticsviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{77308645-822F-457E-8AE1-D8CCD3C1A33B}|MVVM_Champ\\MVVM_Champ.csproj|e:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B_c#\\mvvm\\mvvm_champ\\mvvm_champ\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -17,18 +45,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{77308645-822F-457E-8AE1-D8CCD3C1A33B}|MVVM_Champ\\MVVM_Champ.csproj|e:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B_c#\\mvvm\\mvvm_champ\\mvvm_champ\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{77308645-822F-457E-8AE1-D8CCD3C1A33B}|MVVM_Champ\\MVVM_Champ.csproj|solutionrelative:mvvm_champ\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{77308645-822F-457E-8AE1-D8CCD3C1A33B}|MVVM_Champ\\MVVM_Champ.csproj|e:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B_c#\\mvvm\\mvvm_champ\\mvvm_champ\\viewmodels\\goaltypeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{77308645-822F-457E-8AE1-D8CCD3C1A33B}|MVVM_Champ\\MVVM_Champ.csproj|solutionrelative:mvvm_champ\\viewmodels\\goaltypeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{77308645-822F-457E-8AE1-D8CCD3C1A33B}|MVVM_Champ\\MVVM_Champ.csproj|e:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B_c#\\mvvm\\mvvm_champ\\mvvm_champ\\servicecontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{77308645-822F-457E-8AE1-D8CCD3C1A33B}|MVVM_Champ\\MVVM_Champ.csproj|solutionrelative:mvvm_champ\\servicecontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{77308645-822F-457E-8AE1-D8CCD3C1A33B}|MVVM_Champ\\MVVM_Champ.csproj|e:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B_c#\\mvvm\\mvvm_champ\\mvvm_champ\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{77308645-822F-457E-8AE1-D8CCD3C1A33B}|MVVM_Champ\\MVVM_Champ.csproj|solutionrelative:mvvm_champ\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{77308645-822F-457E-8AE1-D8CCD3C1A33B}|MVVM_Champ\\MVVM_Champ.csproj|e:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B_c#\\mvvm\\mvvm_champ\\mvvm_champ\\models\\ichampionshiprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -149,10 +165,6 @@
       "RelativeMoniker": "D:0:0:{77308645-822F-457E-8AE1-D8CCD3C1A33B}|MVVM_Champ\\MVVM_Champ.csproj|solutionrelative:mvvm_champ\\services\\championshiprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{77308645-822F-457E-8AE1-D8CCD3C1A33B}|MVVM_Champ\\MVVM_Champ.csproj|e:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B_c#\\mvvm\\mvvm_champ\\mvvm_champ\\viewmodels\\viewmodelbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{77308645-822F-457E-8AE1-D8CCD3C1A33B}|MVVM_Champ\\MVVM_Champ.csproj|solutionrelative:mvvm_champ\\viewmodels\\viewmodelbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{77308645-822F-457E-8AE1-D8CCD3C1A33B}|MVVM_Champ\\MVVM_Champ.csproj|e:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B_c#\\mvvm\\mvvm_champ\\mvvm_champ\\viewmodels\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{77308645-822F-457E-8AE1-D8CCD3C1A33B}|MVVM_Champ\\MVVM_Champ.csproj|solutionrelative:mvvm_champ\\viewmodels\\relaycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -169,10 +181,6 @@
       "RelativeMoniker": "D:0:0:{77308645-822F-457E-8AE1-D8CCD3C1A33B}|MVVM_Champ\\MVVM_Champ.csproj|solutionrelative:mvvm_champ\\services\\postgresrep.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{77308645-822F-457E-8AE1-D8CCD3C1A33B}|MVVM_Champ\\MVVM_Champ.csproj|e:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B_c#\\mvvm\\mvvm_champ\\mvvm_champ\\view\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{77308645-822F-457E-8AE1-D8CCD3C1A33B}|MVVM_Champ\\MVVM_Champ.csproj|solutionrelative:mvvm_champ\\view\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{77308645-822F-457E-8AE1-D8CCD3C1A33B}|MVVM_Champ\\MVVM_Champ.csproj|e:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B_c#\\mvvm\\mvvm_champ\\mvvm_champ\\models\\icountryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{77308645-822F-457E-8AE1-D8CCD3C1A33B}|MVVM_Champ\\MVVM_Champ.csproj|solutionrelative:mvvm_champ\\models\\icountryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -184,7 +192,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -211,31 +219,62 @@
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "StartupWindow.xaml",
+              "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\view\\StartupWindow.xaml",
+              "RelativeDocumentMoniker": "MVVM_Champ\\view\\StartupWindow.xaml",
+              "ToolTip": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\view\\StartupWindow.xaml",
+              "RelativeToolTip": "MVVM_Champ\\view\\StartupWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-16T16:33:25.652Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "StatisticsViewModel.cs",
+              "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\viewmodels\\StatisticsViewModel.cs",
+              "RelativeDocumentMoniker": "MVVM_Champ\\viewmodels\\StatisticsViewModel.cs",
+              "ToolTip": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\viewmodels\\StatisticsViewModel.cs",
+              "RelativeToolTip": "MVVM_Champ\\viewmodels\\StatisticsViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-16T16:33:09.614Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "GoalTypeViewModel.cs",
               "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\viewmodels\\GoalTypeViewModel.cs",
               "RelativeDocumentMoniker": "MVVM_Champ\\viewmodels\\GoalTypeViewModel.cs",
               "ToolTip": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\viewmodels\\GoalTypeViewModel.cs",
               "RelativeToolTip": "MVVM_Champ\\viewmodels\\GoalTypeViewModel.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAowCAAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-15T16:33:27.134Z"
+              "WhenOpened": "2026-05-15T16:33:27.134Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 10,
               "Title": "App.xaml",
               "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\App.xaml",
               "RelativeDocumentMoniker": "MVVM_Champ\\App.xaml",
               "ToolTip": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\App.xaml",
               "RelativeToolTip": "MVVM_Champ\\App.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-05-15T16:32:09.08Z"
+              "WhenOpened": "2026-05-15T16:32:09.08Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 12,
               "Title": "README.md",
               "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\README.md",
               "RelativeDocumentMoniker": "README.md",
@@ -247,7 +286,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 13,
               "Title": "OtherModelTests.cs",
               "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ.Tests\\OtherModelTests.cs",
               "RelativeDocumentMoniker": "MVVM_Champ.Tests\\OtherModelTests.cs",
@@ -259,20 +298,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "StartupWindow.xaml.cs",
               "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\view\\StartupWindow.xaml.cs",
               "RelativeDocumentMoniker": "MVVM_Champ\\view\\StartupWindow.xaml.cs",
               "ToolTip": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\view\\StartupWindow.xaml.cs",
               "RelativeToolTip": "MVVM_Champ\\view\\StartupWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABMAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-13T15:14:03.446Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 25,
               "Title": "TestDataService.cs",
               "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\services\\TestDataService.cs",
               "RelativeDocumentMoniker": "MVVM_Champ\\services\\TestDataService.cs",
@@ -284,7 +323,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 26,
               "Title": "MainViewModel.cs",
               "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\viewmodels\\MainViewModel.cs",
               "RelativeDocumentMoniker": "MVVM_Champ\\viewmodels\\MainViewModel.cs",
@@ -296,19 +335,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "AssemblyInfo.cs",
               "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\AssemblyInfo.cs",
               "RelativeDocumentMoniker": "MVVM_Champ\\AssemblyInfo.cs",
               "ToolTip": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\AssemblyInfo.cs",
               "RelativeToolTip": "MVVM_Champ\\AssemblyInfo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-13T05:44:24.936Z"
+              "WhenOpened": "2026-05-13T05:44:24.936Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 15,
               "Title": "CrudServiceTests.cs",
               "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ.Tests\\CrudServiceTests.cs",
               "RelativeDocumentMoniker": "MVVM_Champ.Tests\\CrudServiceTests.cs",
@@ -320,7 +360,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 16,
               "Title": "CountryTests.cs",
               "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ.Tests\\CountryTests.cs",
               "RelativeDocumentMoniker": "MVVM_Champ.Tests\\CountryTests.cs",
@@ -332,7 +372,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 17,
               "Title": "ChampionshipTests.cs",
               "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ.Tests\\ChampionshipTests.cs",
               "RelativeDocumentMoniker": "MVVM_Champ.Tests\\ChampionshipTests.cs",
@@ -344,7 +384,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 18,
               "Title": "MVVMArchitecture.puml",
               "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\MVVMArchitecture.puml",
               "RelativeDocumentMoniker": "MVVM_Champ\\MVVMArchitecture.puml",
@@ -355,7 +395,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 19,
               "Title": "UnitTests.cs",
               "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ.Tests\\UnitTests.cs",
               "RelativeDocumentMoniker": "MVVM_Champ.Tests\\UnitTests.cs",
@@ -366,7 +406,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "ServiceContainer.cs",
               "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\ServiceContainer.cs",
               "RelativeDocumentMoniker": "MVVM_Champ\\ServiceContainer.cs",
@@ -374,11 +414,12 @@
               "RelativeToolTip": "MVVM_Champ\\ServiceContainer.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-30T04:32:28.649Z"
+              "WhenOpened": "2026-04-30T04:32:28.649Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 27,
               "Title": "Match.cs",
               "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\models\\Match.cs",
               "RelativeDocumentMoniker": "MVVM_Champ\\models\\Match.cs",
@@ -390,7 +431,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 28,
               "Title": "Goal.cs",
               "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\models\\Goal.cs",
               "RelativeDocumentMoniker": "MVVM_Champ\\models\\Goal.cs",
@@ -402,7 +443,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 29,
               "Title": "IMatchRepository.cs",
               "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\models\\IMatchRepository.cs",
               "RelativeDocumentMoniker": "MVVM_Champ\\models\\IMatchRepository.cs",
@@ -414,7 +455,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 30,
               "Title": "ICoachMatchRepository.cs",
               "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\models\\ICoachMatchRepository.cs",
               "RelativeDocumentMoniker": "MVVM_Champ\\models\\ICoachMatchRepository.cs",
@@ -426,7 +467,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 11,
               "Title": "IChampionshipRepository.cs",
               "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\models\\IChampionshipRepository.cs",
               "RelativeDocumentMoniker": "MVVM_Champ\\models\\IChampionshipRepository.cs",
@@ -438,7 +479,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 31,
               "Title": "CrudService.cs",
               "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\services\\CrudService.cs",
               "RelativeDocumentMoniker": "MVVM_Champ\\services\\CrudService.cs",
@@ -450,7 +491,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 32,
               "Title": "CoachMatchRepository.cs",
               "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\services\\CoachMatchRepository.cs",
               "RelativeDocumentMoniker": "MVVM_Champ\\services\\CoachMatchRepository.cs",
@@ -462,7 +503,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 33,
               "Title": "GoalRepository.cs",
               "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\services\\GoalRepository.cs",
               "RelativeDocumentMoniker": "MVVM_Champ\\services\\GoalRepository.cs",
@@ -474,7 +515,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 34,
               "Title": "ChampionshipViewModel.cs",
               "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\viewmodels\\ChampionshipViewModel.cs",
               "RelativeDocumentMoniker": "MVVM_Champ\\viewmodels\\ChampionshipViewModel.cs",
@@ -486,7 +527,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 35,
               "Title": "IPersonRepository.cs",
               "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\models\\IPersonRepository.cs",
               "RelativeDocumentMoniker": "MVVM_Champ\\models\\IPersonRepository.cs",
@@ -498,7 +539,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 9,
               "Title": "App.config",
               "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\App.config",
               "RelativeDocumentMoniker": "MVVM_Champ\\App.config",
@@ -510,7 +551,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 36,
               "Title": "App.xaml",
               "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\App.xaml",
               "RelativeDocumentMoniker": "MVVM_Champ\\App.xaml",
@@ -521,7 +562,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 14,
               "Title": "MVVM_Champ.csproj.user",
               "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\MVVM_Champ.csproj.user",
               "RelativeDocumentMoniker": "MVVM_Champ\\MVVM_Champ.csproj.user",
@@ -533,7 +574,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 37,
               "Title": "MVVM_Champ.csproj",
               "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\MVVM_Champ.csproj",
               "RelativeDocumentMoniker": "MVVM_Champ\\MVVM_Champ.csproj",
@@ -545,7 +586,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 38,
               "Title": "IGoalRepository.cs",
               "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\models\\IGoalRepository.cs",
               "RelativeDocumentMoniker": "MVVM_Champ\\models\\IGoalRepository.cs",
@@ -557,7 +598,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 39,
               "Title": "Championship.cs",
               "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\models\\Championship.cs",
               "RelativeDocumentMoniker": "MVVM_Champ\\models\\Championship.cs",
@@ -569,7 +610,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 40,
               "Title": "ChampionshipRepository.cs",
               "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\services\\ChampionshipRepository.cs",
               "RelativeDocumentMoniker": "MVVM_Champ\\services\\ChampionshipRepository.cs",
@@ -581,7 +622,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 20,
               "Title": "MVVM_Champ.csproj.nuget.g.props",
               "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\obj\\MVVM_Champ.csproj.nuget.g.props",
               "RelativeDocumentMoniker": "MVVM_Champ\\obj\\MVVM_Champ.csproj.nuget.g.props",
@@ -593,7 +634,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
               "Title": "App.xaml.cs",
               "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\App.xaml.cs",
               "RelativeDocumentMoniker": "MVVM_Champ\\App.xaml.cs",
@@ -605,7 +646,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 6,
               "Title": "ViewModelBase.cs",
               "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\viewmodels\\ViewModelBase.cs",
               "RelativeDocumentMoniker": "MVVM_Champ\\viewmodels\\ViewModelBase.cs",
@@ -613,11 +654,12 @@
               "RelativeToolTip": "MVVM_Champ\\viewmodels\\ViewModelBase.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-26T19:10:01.7Z"
+              "WhenOpened": "2026-04-26T19:10:01.7Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 41,
               "Title": "RelayCommand.cs",
               "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\viewmodels\\RelayCommand.cs",
               "RelativeDocumentMoniker": "MVVM_Champ\\viewmodels\\RelayCommand.cs",
@@ -629,7 +671,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 42,
               "Title": "CountryViewModel.cs",
               "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\viewmodels\\CountryViewModel.cs",
               "RelativeDocumentMoniker": "MVVM_Champ\\viewmodels\\CountryViewModel.cs",
@@ -641,7 +683,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 45,
               "Title": "ICountryRepository.cs",
               "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\models\\ICountryRepository.cs",
               "RelativeDocumentMoniker": "MVVM_Champ\\models\\ICountryRepository.cs",
@@ -653,7 +695,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 43,
               "Title": "Country.cs",
               "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\models\\Country.cs",
               "RelativeDocumentMoniker": "MVVM_Champ\\models\\Country.cs",
@@ -665,7 +707,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 44,
               "Title": "PostgresRep.cs",
               "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\services\\PostgresRep.cs",
               "RelativeDocumentMoniker": "MVVM_Champ\\services\\PostgresRep.cs",
@@ -677,19 +719,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 5,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\view\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MVVM_Champ\\view\\MainWindow.xaml",
               "ToolTip": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\view\\MainWindow.xaml",
               "RelativeToolTip": "MVVM_Champ\\view\\MainWindow.xaml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-04-26T19:03:37.724Z"
+              "WhenOpened": "2026-04-26T19:03:37.724Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 21,
               "Title": "ICountry.cs",
               "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\WorldCupMVVM\\WorldCupMVVM\\Models\\ICountry.cs",
               "RelativeDocumentMoniker": "..\\WorldCupMVVM\\WorldCupMVVM\\Models\\ICountry.cs",
@@ -701,7 +743,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 22,
               "Title": "Country.cs",
               "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\WorldCupMVVM\\WorldCupMVVM\\Models\\Country.cs",
               "RelativeDocumentMoniker": "..\\WorldCupMVVM\\WorldCupMVVM\\Models\\Country.cs",
@@ -713,7 +755,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 23,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MVVM_Champ\\MainWindow.xaml",
@@ -724,7 +766,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 24,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "E:\\\u041F\u0440\u043E\u0435\u043A\u0442\u044B_C#\\MVVM\\MVVM_Champ\\MVVM_Champ\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "MVVM_Champ\\MainWindow.xaml.cs",
@@ -733,10 +775,6 @@
               "ViewState": "AgIAABYAAAAAAAAAAAAQwBgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-26T19:02:16.116Z"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
             }
           ]
         },

@@ -16,14 +16,7 @@
                        Foreground="#333333"
                        TextAlignment="Center"
                        Margin="0,0,0,20"/>
-            
-            <TextBlock Text="Вы можете загрузить тестовые данные или использовать данные из базы данных" 
-                       FontSize="14" 
-                       Foreground="#666666"
-                       TextAlignment="Center"
-                       TextWrapping="Wrap"
-                       Margin="0,0,0,30"/>
-            
+
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <Button Name="TestDataButton"
                         Width="150" 
