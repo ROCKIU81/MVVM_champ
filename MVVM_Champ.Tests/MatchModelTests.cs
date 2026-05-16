@@ -43,5 +43,22 @@ namespace MVVM_Champ.Tests
             Assert.Equal(0, match.Team1Score);
             Assert.Equal(0, match.Team2Score);
         }
+
+        [Fact]
+        public void Match_WithDifferentTeams_CreatesSuccessfully()
+        {
+            var match = new Match { Id = 1, ChampionshipId = 1, Team1Id = 1, Team2Id = 2, Team1Score = 1, Team2Score = 1 };
+
+            Assert.NotEqual(match.Team1Id, match.Team2Id);
+        }
+
+        [Fact]
+        public void Match_CanUpdateChampionshipId()
+        {
+            var match = new Match { Id = 1, ChampionshipId = 1, Team1Id = 1, Team2Id = 2, Team1Score = 1, Team2Score = 1 };
+            match.ChampionshipId = 2;
+
+            Assert.Equal(2, match.ChampionshipId);
+        }
     }
 }

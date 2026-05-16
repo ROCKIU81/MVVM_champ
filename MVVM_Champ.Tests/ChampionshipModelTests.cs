@@ -39,5 +39,23 @@ namespace MVVM_Champ.Tests
 
             Assert.Equal("Санкт-Петербург", championship.City);
         }
+
+        [Fact]
+        public void Championship_WithDifferentYears_CreatesSuccessfully()
+        {
+            var championship1 = new Championship { Id = 1, Year = 2018, City = "Москва", CountryId = 1 };
+            var championship2 = new Championship { Id = 2, Year = 2022, City = "Доха", CountryId = 2 };
+
+            Assert.NotEqual(championship1.Year, championship2.Year);
+        }
+
+        [Fact]
+        public void Championship_CanUpdateCountryId()
+        {
+            var championship = new Championship { Id = 1, Year = 2022, City = "Москва", CountryId = 1 };
+            championship.CountryId = 2;
+
+            Assert.Equal(2, championship.CountryId);
+        }
     }
 }

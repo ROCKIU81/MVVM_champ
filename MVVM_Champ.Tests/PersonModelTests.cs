@@ -44,5 +44,23 @@ namespace MVVM_Champ.Tests
 
             Assert.Equal("Сергей Иванов", person.FullName);
         }
+
+        [Fact]
+        public void Person_CanUpdateStatus()
+        {
+            var person = new Person { Id = 1, FullName = "Иван Петров", Status = "player" };
+            person.Status = "coach";
+
+            Assert.Equal("coach", person.Status);
+        }
+
+        [Fact]
+        public void Person_WithDifferentDates_CreatesSuccessfully()
+        {
+            var person1 = new Person { Id = 1, FullName = "Иван Петров", DateOfBirth = new DateTime(1990, 5, 15), Status = "player" };
+            var person2 = new Person { Id = 2, FullName = "Сергей Иванов", DateOfBirth = new DateTime(1985, 3, 20), Status = "player" };
+
+            Assert.NotEqual(person1.DateOfBirth, person2.DateOfBirth);
+        }
     }
 }

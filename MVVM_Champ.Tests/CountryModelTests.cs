@@ -32,5 +32,22 @@ namespace MVVM_Champ.Tests
 
             Assert.Equal("Бразилия", country.Name);
         }
+
+        [Fact]
+        public void Country_WithDifferentIds_CreatesSuccessfully()
+        {
+            var country1 = new Country { Id = 1, Name = "Россия" };
+            var country2 = new Country { Id = 2, Name = "Германия" };
+
+            Assert.NotEqual(country1.Id, country2.Id);
+        }
+
+        [Fact]
+        public void Country_WithLongName_CreatesSuccessfully()
+        {
+            var country = new Country { Id = 1, Name = "Соединённые Штаты Америки" };
+
+            Assert.Equal("Соединённые Штаты Америки", country.Name);
+        }
     }
 }

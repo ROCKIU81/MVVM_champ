@@ -51,5 +51,32 @@ namespace MVVM_Champ.Tests
             Assert.Equal(1, coachMatch.MatchId);
             Assert.Equal(1, coachMatch.CoachId);
         }
+
+        [Fact]
+        public void GoalType_CanUpdateName()
+        {
+            var goalType = new GoalType { Id = 1, Name = "С игры", Description = "Гол забит с игры" };
+            goalType.Name = "Пенальти";
+
+            Assert.Equal("Пенальти", goalType.Name);
+        }
+
+        [Fact]
+        public void PlayerSquad_CanUpdatePlayerNumber()
+        {
+            var playerSquad = new PlayerSquad { Id = 1, MatchId = 1, PlayerId = 1, TeamId = 1, PlayerNumber = 10 };
+            playerSquad.PlayerNumber = 7;
+
+            Assert.Equal(7, playerSquad.PlayerNumber);
+        }
+
+        [Fact]
+        public void CoachMatch_CanUpdateTeamId()
+        {
+            var coachMatch = new CoachMatch { Id = 1, MatchId = 1, CoachId = 1, TeamId = 1 };
+            coachMatch.TeamId = 2;
+
+            Assert.Equal(2, coachMatch.TeamId);
+        }
     }
 }
