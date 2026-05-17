@@ -2,7 +2,7 @@ using Xunit;
 using System;
 using WorldCupMVVM.Models;
 
-namespace MVVM_Champ.Tests
+namespace MVVM_champ_test
 {
     public class PersonModelTests
     {

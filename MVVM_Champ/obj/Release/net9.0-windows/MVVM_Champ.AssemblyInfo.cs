@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MVVM_Champ")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+51ba0bd6fa73c8d7817fb22b8e3c2cb7785d2009")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+95cb1176857f8a6a3b74a776137cf0561c8f4121")]
 [assembly: System.Reflection.AssemblyProductAttribute("MVVM_Champ")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MVVM_Champ")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
