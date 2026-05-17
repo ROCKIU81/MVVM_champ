@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using WorldCupMVVM.Models;
 using WorldCupMVVM.Services;
 
-namespace MVVM_Champ.Tests
+namespace MVVM_champ_test
 {
     public class RepositoryTests
     {
