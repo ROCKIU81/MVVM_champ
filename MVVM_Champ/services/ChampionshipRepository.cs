@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using WorldCupMVVM.Models;
 using Npgsql;
@@ -83,6 +84,18 @@ namespace WorldCupMVVM.Services
 
         public async Task AddAsync(Championship championship)
         {
+            if (AppSettings.UseTestData)
+            {
+                var maxId = TestDataService.Championships.Count > 0 
+                    ? TestDataService.Championships.Max(c => c.Id) 
+                    : 0;
+                championship.Id = maxId + 1;
+                championship.Country = TestDataService.Countries.FirstOrDefault(c => c.Id == championship.CountryId);
+                TestDataService.Championships.Add(championship);
+                await Task.CompletedTask;
+                return;
+            }
+
             using (var connection = new NpgsqlConnection(_connectionString))
             {
                 await connection.OpenAsync();
@@ -100,6 +113,20 @@ namespace WorldCupMVVM.Services
 
         public async Task UpdateAsync(Championship championship)
         {
+            if (AppSettings.UseTestData)
+            {
+                var existing = TestDataService.Championships.FirstOrDefault(c => c.Id == championship.Id);
+                if (existing != null)
+                {
+                    existing.Year = championship.Year;
+                    existing.CountryId = championship.CountryId;
+                    existing.City = championship.City;
+                    existing.Country = TestDataService.Countries.FirstOrDefault(c => c.Id == championship.CountryId);
+                }
+                await Task.CompletedTask;
+                return;
+            }
+
             using (var connection = new NpgsqlConnection(_connectionString))
             {
                 await connection.OpenAsync();
@@ -118,6 +145,17 @@ namespace WorldCupMVVM.Services
 
         public async Task DeleteAsync(int id)
         {
+            if (AppSettings.UseTestData)
+            {
+                var championship = TestDataService.Championships.FirstOrDefault(c => c.Id == id);
+                if (championship != null)
+                {
+                    TestDataService.Championships.Remove(championship);
+                }
+                await Task.CompletedTask;
+                return;
+            }
+
             using (var connection = new NpgsqlConnection(_connectionString))
             {
                 await connection.OpenAsync();
