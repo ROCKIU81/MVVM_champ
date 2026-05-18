@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using WorldCupMVVM.Models;
 using Npgsql;
@@ -79,6 +80,17 @@ namespace WorldCupMVVM.Services
 
         public async Task AddAsync(Person person)
         {
+            if (AppSettings.UseTestData)
+            {
+                var maxId = TestDataService.People.Count > 0 
+                    ? TestDataService.People.Max(p => p.Id) 
+                    : 0;
+                person.Id = maxId + 1;
+                TestDataService.People.Add(person);
+                await Task.CompletedTask;
+                return;
+            }
+
             using (var connection = new NpgsqlConnection(_connectionString))
             {
                 await connection.OpenAsync();
@@ -96,6 +108,19 @@ namespace WorldCupMVVM.Services
 
         public async Task UpdateAsync(Person person)
         {
+            if (AppSettings.UseTestData)
+            {
+                var existing = TestDataService.People.FirstOrDefault(p => p.Id == person.Id);
+                if (existing != null)
+                {
+                    existing.FullName = person.FullName;
+                    existing.DateOfBirth = person.DateOfBirth;
+                    existing.Status = person.Status;
+                }
+                await Task.CompletedTask;
+                return;
+            }
+
             using (var connection = new NpgsqlConnection(_connectionString))
             {
                 await connection.OpenAsync();
@@ -114,6 +139,17 @@ namespace WorldCupMVVM.Services
 
         public async Task DeleteAsync(int id)
         {
+            if (AppSettings.UseTestData)
+            {
+                var person = TestDataService.People.FirstOrDefault(p => p.Id == id);
+                if (person != null)
+                {
+                    TestDataService.People.Remove(person);
+                }
+                await Task.CompletedTask;
+                return;
+            }
+
             using (var connection = new NpgsqlConnection(_connectionString))
             {
                 await connection.OpenAsync();

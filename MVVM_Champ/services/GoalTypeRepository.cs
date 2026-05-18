@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using WorldCupMVVM.Models;
 using Npgsql;
@@ -77,6 +78,17 @@ namespace WorldCupMVVM.Services
 
         public async Task AddAsync(GoalType goalType)
         {
+            if (AppSettings.UseTestData)
+            {
+                var maxId = TestDataService.GoalTypes.Count > 0 
+                    ? TestDataService.GoalTypes.Max(g => g.Id) 
+                    : 0;
+                goalType.Id = maxId + 1;
+                TestDataService.GoalTypes.Add(goalType);
+                await Task.CompletedTask;
+                return;
+            }
+
             using (var connection = new NpgsqlConnection(_connectionString))
             {
                 await connection.OpenAsync();
@@ -93,6 +105,18 @@ namespace WorldCupMVVM.Services
 
         public async Task UpdateAsync(GoalType goalType)
         {
+            if (AppSettings.UseTestData)
+            {
+                var existing = TestDataService.GoalTypes.FirstOrDefault(g => g.Id == goalType.Id);
+                if (existing != null)
+                {
+                    existing.Name = goalType.Name;
+                    existing.Description = goalType.Description;
+                }
+                await Task.CompletedTask;
+                return;
+            }
+
             using (var connection = new NpgsqlConnection(_connectionString))
             {
                 await connection.OpenAsync();
@@ -110,6 +134,17 @@ namespace WorldCupMVVM.Services
 
         public async Task DeleteAsync(int id)
         {
+            if (AppSettings.UseTestData)
+            {
+                var goalType = TestDataService.GoalTypes.FirstOrDefault(g => g.Id == id);
+                if (goalType != null)
+                {
+                    TestDataService.GoalTypes.Remove(goalType);
+                }
+                await Task.CompletedTask;
+                return;
+            }
+
             using (var connection = new NpgsqlConnection(_connectionString))
             {
                 await connection.OpenAsync();
