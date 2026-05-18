@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using WorldCupMVVM.Models;
 using Npgsql;
@@ -75,6 +76,17 @@ namespace WorldCupMVVM.Services
 
         public async Task AddAsync(Country country)
         {
+            if (AppSettings.UseTestData)
+            {
+                var maxId = TestDataService.Countries.Count > 0 
+                    ? TestDataService.Countries.Max(c => c.Id) 
+                    : 0;
+                country.Id = maxId + 1;
+                TestDataService.Countries.Add(country);
+                await Task.CompletedTask;
+                return;
+            }
+
             using (var connection = new NpgsqlConnection(_connectionString))
             {
                 await connection.OpenAsync();
@@ -90,6 +102,17 @@ namespace WorldCupMVVM.Services
 
         public async Task UpdateAsync(Country country)
         {
+            if (AppSettings.UseTestData)
+            {
+                var existing = TestDataService.Countries.FirstOrDefault(c => c.Id == country.Id);
+                if (existing != null)
+                {
+                    existing.Name = country.Name;
+                }
+                await Task.CompletedTask;
+                return;
+            }
+
             using (var connection = new NpgsqlConnection(_connectionString))
             {
                 await connection.OpenAsync();
@@ -106,6 +129,17 @@ namespace WorldCupMVVM.Services
 
         public async Task DeleteAsync(int id)
         {
+            if (AppSettings.UseTestData)
+            {
+                var country = TestDataService.Countries.FirstOrDefault(c => c.Id == id);
+                if (country != null)
+                {
+                    TestDataService.Countries.Remove(country);
+                }
+                await Task.CompletedTask;
+                return;
+            }
+
             using (var connection = new NpgsqlConnection(_connectionString))
             {
                 await connection.OpenAsync();

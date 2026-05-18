@@ -14,7 +14,6 @@ namespace WorldCupMVVM.Models
         public Person Player { get; set; }
         public Country Team { get; set; }
 
-        public string MatchName => Match?.MatchDisplay ?? $"Матч #{MatchId}";
         public string PlayerName => Player?.FullName ?? $"Игрок #{PlayerId}";
         public string TeamName => Team?.Name ?? $"Команда #{TeamId}";
         public string SquadDisplay => $"#{PlayerNumber} {PlayerName} ({TeamName})";

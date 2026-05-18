@@ -85,7 +85,7 @@ namespace WorldCupMVVM.Services
         {
             People = new List<Person>
             {
-                // Игроки
+               // игроки
                 new Person { Id = 1, FullName = "Иван Петров", DateOfBirth = new DateTime(1990, 5, 15), Status = "player" },
                 new Person { Id = 2, FullName = "Сергей Сидоров", DateOfBirth = new DateTime(1992, 3, 20), Status = "player" },
                 new Person { Id = 3, FullName = "Алексей Иванов", DateOfBirth = new DateTime(1988, 7, 10), Status = "player" },
@@ -106,7 +106,7 @@ namespace WorldCupMVVM.Services
                 new Person { Id = 18, FullName = "Педри Гонсалес", DateOfBirth = new DateTime(2002, 11, 25), Status = "player" },
                 new Person { Id = 19, FullName = "Джуд Беллингем", DateOfBirth = new DateTime(2003, 6, 29), Status = "player" },
                 new Person { Id = 20, FullName = "Букайо Сака", DateOfBirth = new DateTime(2001, 9, 5), Status = "player" },
-                // Тренеры
+                //тренеры
                 new Person { Id = 21, FullName = "Станислав Черчесов", DateOfBirth = new DateTime(1963, 9, 2), Status = "coach" },
                 new Person { Id = 22, FullName = "Луис Фелипе Сколари", DateOfBirth = new DateTime(1948, 1, 1), Status = "coach" },
                 new Person { Id = 23, FullName = "Йоахим Лёв", DateOfBirth = new DateTime(1960, 2, 3), Status = "coach" },
@@ -126,7 +126,7 @@ namespace WorldCupMVVM.Services
             Matches = new List<Match>();
             int matchId = 1;
             
-            // Чемпионат 2018 - 10 матчей
+            // Чемпионат 2018
             for (int i = 0; i < 10; i++)
             {
                 Matches.Add(new Match 
@@ -143,7 +143,7 @@ namespace WorldCupMVVM.Services
                 });
             }
             
-            // Чемпионат 2022 - 10 матчей
+            // Чемпионат 2022 
             for (int i = 0; i < 10; i++)
             {
                 Matches.Add(new Match 
@@ -168,7 +168,7 @@ namespace WorldCupMVVM.Services
             Goals = new List<Goal>();
             int goalId = 1;
             
-            // Генерируем голы для каждого матча
+       
             foreach (var match in Matches)
             {
                 // Голы для команды 1
@@ -212,7 +212,7 @@ namespace WorldCupMVVM.Services
             PlayerSquads = new List<PlayerSquad>();
             int squadId = 1;
             
-            // Генерируем составы для каждого матча (по 11 игроков на команду)
+
             foreach (var match in Matches)
             {
                 // Состав команды 1
@@ -256,7 +256,6 @@ namespace WorldCupMVVM.Services
             CoachMatches = new List<CoachMatch>();
             int coachMatchId = 1;
             
-            // Генерируем тренеров для каждого матча (по 1 тренеру на команду)
             foreach (var match in Matches)
             {
                 // Тренер команды 1

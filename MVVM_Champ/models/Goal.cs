@@ -16,8 +16,6 @@ namespace WorldCupMVVM.Models
 
         public string PlayerName => Player?.FullName ?? $"Игрок #{PlayerId}";
         public string GoalTypeName => GoalType?.Name ?? $"Тип #{GoalTypeId}";
-        public string MatchName => Match?.MatchDisplay ?? $"Матч #{MatchId}";
-        public string MinuteDisplay => $"{Minute}'";
         public string GoalDisplay => $"{PlayerName}, {Minute}' ({GoalTypeName})";
     }
 }
