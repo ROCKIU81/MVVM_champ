@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using WorldCupMVVM.Models;
 using Npgsql;
@@ -144,6 +145,20 @@ namespace WorldCupMVVM.Services
 
         public async Task AddAsync(CoachMatch coachMatch)
         {
+            if (AppSettings.UseTestData)
+            {
+                var maxId = TestDataService.CoachMatches.Count > 0 
+                    ? TestDataService.CoachMatches.Max(cm => cm.Id) 
+                    : 0;
+                coachMatch.Id = maxId + 1;
+                coachMatch.Match = TestDataService.Matches.FirstOrDefault(m => m.Id == coachMatch.MatchId);
+                coachMatch.Coach = TestDataService.People.FirstOrDefault(p => p.Id == coachMatch.CoachId);
+                coachMatch.Team = TestDataService.Countries.FirstOrDefault(c => c.Id == coachMatch.TeamId);
+                TestDataService.CoachMatches.Add(coachMatch);
+                await Task.CompletedTask;
+                return;
+            }
+
             using (var connection = new NpgsqlConnection(_connectionString))
             {
                 await connection.OpenAsync();
@@ -161,6 +176,22 @@ namespace WorldCupMVVM.Services
 
         public async Task UpdateAsync(CoachMatch coachMatch)
         {
+            if (AppSettings.UseTestData)
+            {
+                var existing = TestDataService.CoachMatches.FirstOrDefault(cm => cm.Id == coachMatch.Id);
+                if (existing != null)
+                {
+                    existing.MatchId = coachMatch.MatchId;
+                    existing.CoachId = coachMatch.CoachId;
+                    existing.TeamId = coachMatch.TeamId;
+                    existing.Match = TestDataService.Matches.FirstOrDefault(m => m.Id == coachMatch.MatchId);
+                    existing.Coach = TestDataService.People.FirstOrDefault(p => p.Id == coachMatch.CoachId);
+                    existing.Team = TestDataService.Countries.FirstOrDefault(c => c.Id == coachMatch.TeamId);
+                }
+                await Task.CompletedTask;
+                return;
+            }
+
             using (var connection = new NpgsqlConnection(_connectionString))
             {
                 await connection.OpenAsync();
@@ -179,6 +210,17 @@ namespace WorldCupMVVM.Services
 
         public async Task DeleteAsync(int id)
         {
+            if (AppSettings.UseTestData)
+            {
+                var coachMatch = TestDataService.CoachMatches.FirstOrDefault(cm => cm.Id == id);
+                if (coachMatch != null)
+                {
+                    TestDataService.CoachMatches.Remove(coachMatch);
+                }
+                await Task.CompletedTask;
+                return;
+            }
+
             using (var connection = new NpgsqlConnection(_connectionString))
             {
                 await connection.OpenAsync();

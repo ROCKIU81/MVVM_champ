@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using WorldCupMVVM.Models;
 using Npgsql;
@@ -147,6 +148,20 @@ namespace WorldCupMVVM.Services
 
         public async Task AddAsync(PlayerSquad playerSquad)
         {
+            if (AppSettings.UseTestData)
+            {
+                var maxId = TestDataService.PlayerSquads.Count > 0 
+                    ? TestDataService.PlayerSquads.Max(ps => ps.Id) 
+                    : 0;
+                playerSquad.Id = maxId + 1;
+                playerSquad.Match = TestDataService.Matches.FirstOrDefault(m => m.Id == playerSquad.MatchId);
+                playerSquad.Player = TestDataService.People.FirstOrDefault(p => p.Id == playerSquad.PlayerId);
+                playerSquad.Team = TestDataService.Countries.FirstOrDefault(c => c.Id == playerSquad.TeamId);
+                TestDataService.PlayerSquads.Add(playerSquad);
+                await Task.CompletedTask;
+                return;
+            }
+
             using (var connection = new NpgsqlConnection(_connectionString))
             {
                 await connection.OpenAsync();
@@ -165,6 +180,23 @@ namespace WorldCupMVVM.Services
 
         public async Task UpdateAsync(PlayerSquad playerSquad)
         {
+            if (AppSettings.UseTestData)
+            {
+                var existing = TestDataService.PlayerSquads.FirstOrDefault(ps => ps.Id == playerSquad.Id);
+                if (existing != null)
+                {
+                    existing.MatchId = playerSquad.MatchId;
+                    existing.PlayerId = playerSquad.PlayerId;
+                    existing.TeamId = playerSquad.TeamId;
+                    existing.PlayerNumber = playerSquad.PlayerNumber;
+                    existing.Match = TestDataService.Matches.FirstOrDefault(m => m.Id == playerSquad.MatchId);
+                    existing.Player = TestDataService.People.FirstOrDefault(p => p.Id == playerSquad.PlayerId);
+                    existing.Team = TestDataService.Countries.FirstOrDefault(c => c.Id == playerSquad.TeamId);
+                }
+                await Task.CompletedTask;
+                return;
+            }
+
             using (var connection = new NpgsqlConnection(_connectionString))
             {
                 await connection.OpenAsync();
@@ -184,6 +216,17 @@ namespace WorldCupMVVM.Services
 
         public async Task DeleteAsync(int id)
         {
+            if (AppSettings.UseTestData)
+            {
+                var playerSquad = TestDataService.PlayerSquads.FirstOrDefault(ps => ps.Id == id);
+                if (playerSquad != null)
+                {
+                    TestDataService.PlayerSquads.Remove(playerSquad);
+                }
+                await Task.CompletedTask;
+                return;
+            }
+
             using (var connection = new NpgsqlConnection(_connectionString))
             {
                 await connection.OpenAsync();
